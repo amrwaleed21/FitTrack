@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');:root{--bg:#090909;--panel:#141414;--panel2:#1c1c1c;--orange:#ff6500;--orange2:#ff8a35;--text:#f7f7f7;--muted:#aaa;--line:#2b2b2b;--blue:#65cfff;--green:#69d391}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 0%,#301505 0,transparent 32%),var(--bg);color:var(--text);font-family:'Cairo',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 14px;font-weight:800}input,select{width:100%;background:#0c0c0c;border:1px solid #343434;color:white;border-radius:11px;padding:11px;margin:6px 0 14px;outline:none}input:focus,select:focus{border-color:var(--orange)}label{display:block;font-size:13px;color:#ddd;font-weight:700}.hidden{display:none!important}.login-wrap{min-height:100vh;display:grid;place-items:center;padding:20px}.login-card{width:min(440px,100%);background:#141414;border:1px solid #333;border-radius:24px;padding:26px;box-shadow:0 20px 70px #000}.brand{font-weight:900;font-size:28px;letter-spacing:-1px}.brand span{color:var(--orange)}.brandline{display:flex;align-items:center;gap:7px}.app-icon{width:34px;height:34px;object-fit:contain;border-radius:9px}.login-icon{display:block;width:76px;height:76px;margin:0 auto 10px}.hero-icon{width:85px;height:85px;object-fit:contain;border-radius:20px}.muted{color:var(--muted);font-size:14px}.primary{background:linear-gradient(120deg,var(--orange),#ff7d1f);color:#fff;width:100%;box-shadow:0 6px 18px #ff650022}.secondary{background:#252525;color:#fff;width:100%;margin-top:8px;border:1px solid #363636}.compact{width:auto;padding:8px 12px;font-size:12px}.quiet{background:transparent;color:#ddd;border:1px solid #383838}.error{color:#ff8a8a}.topbar{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,calc((100vw - 1100px)/2));border-bottom:1px solid #262626;background:#0c0c0ceF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.top-actions{display:flex;gap:12px;align-items:center}.wrap{max-width:1100px;margin:auto;padding:20px}.welcome{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(110deg,#221207,#151515 65%);border:1px solid #49260f;border-radius:22px;padding:22px;margin-bottom:16px}.welcome h1{margin:4px 0;font-size:clamp(22px,4vw,34px)}.eyebrow{color:var(--orange2);font-size:11px;font-weight:900;letter-spacing:1.4px}.quickstats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.stat{background:#151515;border:1px solid #292929;border-radius:15px;padding:12px 16px}.stat small{display:block;color:var(--muted)}.stat strong{font-size:clamp(17px,2.5vw,24px);color:var(--orange2)}.waterstat strong,.waterpanel h3{color:var(--blue)}.activitystat strong{color:var(--green)}.nav{display:flex;gap:8px;overflow:auto;padding:5px 0 15px;scrollbar-width:thin}.navbtn{white-space:nowrap;background:#181818;color:#bbb;border:1px solid #292929}.navbtn.active{background:var(--orange);color:white;border-color:var(--orange)}.page{animation:fade .2s ease}@keyframes fade{from{opacity:.5;transform:translateY(3px)}to{opacity:1;transform:none}}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}.section-title h2{margin:0;font-size:22px}.section-title p{margin:3px 0}.cards{display:grid;gap:13px;margin:12px 0 22px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.panel{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:17px;margin-bottom:13px}.panel h3{margin:0 0 10px;font-size:17px}.progress{height:8px;border-radius:99px;background:#303030;overflow:hidden;margin:14px 0}.progress span{display:block;width:0;height:100%;background:var(--orange);border-radius:99px;transition:width .2s}.waterstat .progress span,.waterpanel .progress span{background:var(--blue)}.calories .progress span{background:#ffb15c}.pill{background:#252525;border:1px solid #373737;color:#ddd;border-radius:99px;padding:5px 10px;font-size:12px}.textbtn{background:transparent;color:var(--orange2);padding:5px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 15px}.chip{background:#242424;color:#ddd;border:1px solid #373737;padding:7px 12px;font-size:12px}.chip.active{background:#522508;border-color:var(--orange);color:#ffb17a}.food-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}.food-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-content:start}.food-item{background:#1d1d1d;border:1px solid #303030;border-radius:12px;text-align:right;padding:11px;color:white}.food-item strong{display:block;font-size:14px}.food-item small{display:block;color:#aaa;font-size:11px;margin-top:4px}.food-item.active{border-color:var(--orange);background:#2a170c}.selected-food{margin:0;align-self:start}.gram-control{display:flex;align-items:center;gap:10px}.gram-control input{flex:1}.gram-control span{white-space:nowrap;color:var(--muted);font-size:12px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}.fact{background:#202020;border-radius:10px;padding:10px;border-bottom:2px solid var(--fact)}.fact small{display:block;color:var(--muted);font-size:11px}.fact strong{font-size:17px}.fact strong small{display:inline}.tiny{font-size:11px;line-height:1.7}.stack{display:grid;gap:8px;margin-bottom:20px}.log-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#151515;border:1px solid #292929;border-radius:12px;padding:12px}.log-item strong{display:block}.log-item small{color:var(--muted)}.log-right{text-align:left;white-space:nowrap}.log-right b{color:var(--orange2)}.person-card{background:#161616;border:1px solid #303030;border-radius:16px;padding:16px}.person-card.me-card{border-color:#7a3b12}.person-card h3{margin:0 0 10px}.person-card .big{font-size:28px;color:var(--orange2);font-weight:900}.person-card .big small{font-size:12px}.person-card .mini{display:flex;justify-content:space-between;color:#bbb;border-top:1px solid #292929;padding-top:9px;margin-top:9px;font-size:13px}.barrow{display:grid;grid-template-columns:55px 1fr 80px;align-items:center;gap:9px;margin:12px 0}.bar{height:9px;background:#333;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;background:var(--blue);border-radius:99px}.challenge{border:1px solid #333;background:#1a1a1a;border-radius:12px;padding:11px;margin:8px 0}.challenge strong{display:block}.challenge small{color:var(--muted)}.water-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.waterbtn{background:#102d3a;border:1px solid #23556a;color:#9de4ff}.needline{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #2c2c2c;padding:10px 0;font-size:13px}.needline b{color:#ffb27a;text-align:left}.day-panel h3{color:#ffb27a}.plan-row{display:flex;align-items:center;gap:8px;border-top:1px solid #2c2c2c;padding:10px 0}.plan-row>div{flex:1}.plan-row strong{display:block;font-size:13px}.plan-row small{color:var(--muted);font-size:11px}.donebtn{background:#153d2a;color:#8be4ae;padding:8px 10px;font-size:12px}.deletebtn{background:#351b1b;color:#ff9b9b;padding:7px 10px}.notice{color:#ffbc91;font-size:12px}footer{text-align:center;color:#777;font-size:12px;padding:22px 0}@media(max-width:700px){.wrap{padding:13px}.welcome{padding:16px}.hero-icon{width:60px;height:60px}.two{grid-template-columns:1fr}.quickstats{gap:7px}.stat{padding:10px}.stat strong{font-size:18px}.navbtn{padding:9px 12px;font-size:12px}.food-layout{grid-template-columns:1fr}.food-list{grid-template-columns:repeat(2,minmax(0,1fr))}.selected-food{order:2}.section-title h2{font-size:20px}.topbar{padding:0 14px}.log-item{align-items:flex-start}.log-right{font-size:12px}.plan-row{flex-wrap:wrap}.plan-row>div{min-width:55%}.barrow{grid-template-columns:45px 1fr 70px}.welcome>div{max-width:78%}}
+
+/* FitBros usability updates */
+.logged-user-note{background:#202020;border:1px solid #343434;border-radius:12px;padding:10px 12px;margin:8px 0 14px;color:#bbb;font-size:13px}.logged-user-note b{color:#ffb27a}.history-filter{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}.history-filter input{margin-bottom:8px}.history-filter button{margin:0}.day-panel{min-width:0;box-shadow:0 6px 20px #0002}.day-panel h3{display:flex;align-items:center;gap:8px}.day-panel h3:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange)}#weeklyPlan{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#weeklyPlan .panel{margin:0}.app-icon,.hero-icon{background:#1b1b1b;border:1px solid #3a3a3a;flex-shrink:0}.stat{position:relative;overflow:hidden;box-shadow:0 8px 24px #0002}.stat:after{content:"";position:absolute;width:70px;height:70px;border-radius:50%;background:currentColor;opacity:.045;left:-15px;top:-20px}.calories{color:#ffb15c}.waterstat{color:#65cfff}.activitystat{color:#69d391}.stat strong{display:block;margin:4px 0}.stat .progress{height:9px;border:1px solid #ffffff0d}@media(max-width:700px){#weeklyPlan{grid-template-columns:1fr}.history-filter{grid-template-columns:1fr}.history-filter button{width:100%}}
+
+
+/* Clean, consistent FitBros layout */
+:root{--bg:#0b0d10;--panel:#14181d;--panel2:#1b2026;--line:#292f36;--orange:#ff6a00;--orange2:#ff914d;--blue:#69cfff;--green:#69d391}
+body{background:#0b0d10;line-height:1.55}
+.brand{direction:ltr;unicode-bidi:isolate;display:inline-flex;align-items:center;gap:0;white-space:nowrap}.brand b{color:#f7f7f7;font-weight:900}.brandline{flex-direction:row;gap:8px}.brandline>span{color:var(--orange)}
+.topbar{height:62px}.wrap{max-width:1040px;padding:18px}.welcome{margin-top:4px;min-height:150px;background:linear-gradient(115deg,#25170f,#15181c 75%);border-color:#3a2a20}.welcome>div{max-width:80%}.quickstats{gap:12px}.stat{padding:15px 16px;border-radius:17px}.stat strong{font-size:23px}.nav{position:sticky;top:62px;z-index:4;background:#0b0d10;padding:10px 0 13px;gap:7px}.navbtn{border-radius:10px;padding:9px 13px}.navbtn.active{box-shadow:0 4px 14px #ff6a0028}.section-title{margin:22px 0 12px}.section-title h2{font-size:20px}.panel{padding:18px;background:#14181d;border-color:#292f36}.cards{gap:12px}.primary{min-height:44px}.food-layout{grid-template-columns:minmax(0,1fr) 320px}.food-list{grid-template-columns:repeat(2,minmax(0,1fr))}.selected-food{position:sticky;top:145px}.fact{background:#1b2026}.quickstats .progress{margin:10px 0 2px}.waterbtn{min-height:42px}.log-item{background:#13171b}.logged-user-note{background:#191e23;border-color:#2d343c}#weeklyPlan{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:20px}#weeklyPlan .day-panel{min-height:160px;padding:13px;border-radius:15px}#weeklyPlan .day-panel h3{font-size:15px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #2a3037}#weeklyPlan .plan-row{align-items:flex-start;flex-wrap:wrap;gap:6px}#weeklyPlan .plan-row>div{flex-basis:100%;min-width:0}#weeklyPlan .plan-row button{flex:1;padding:7px 8px;font-size:11px}#weeklyPlan .day-panel>p{font-size:12px}.history-filter{max-width:520px}.person-card{background:#15191e}.person-card.me-card{border-color:#8a471c}.person-card .big{font-size:25px}.challenge{background:#181d22}.food-item{min-height:68px}.food-item small{line-height:1.5}.login-card{border-radius:20px;background:#14181d}.login-card .brand{justify-content:center}footer{padding:28px 0 12px}
+@media(max-width:800px){.wrap{padding:12px}.welcome{padding:17px}.quickstats{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.stat{padding:10px 9px}.stat strong{font-size:16px}.stat small{font-size:10px}.two{grid-template-columns:1fr}.food-layout{grid-template-columns:1fr}.selected-food{position:static;order:-1}.nav{top:62px}.navbtn{padding:8px 10px;font-size:12px}#weeklyPlan{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}#weeklyPlan .day-panel{min-height:150px;padding:11px}.section-title h2{font-size:19px}.hero-icon{width:55px;height:55px}.welcome h1{font-size:24px}.welcome>div{max-width:82%}.history-filter{grid-template-columns:minmax(0,1fr) auto}}
+@media(max-width:380px){.quickstats{grid-template-columns:1fr}.stat{padding:12px}.stat small{font-size:12px}.stat strong{font-size:20px}.welcome>div{max-width:100%}.hero-icon{display:none}#weeklyPlan{grid-template-columns:repeat(2,minmax(0,1fr))}.navbtn{font-size:11px;padding:8px}}
+/* Modern dashboard gauges and calmer navigation */
+.quickstats{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;gap:7px;padding:14px 8px}
+.stat small{font-size:12px;line-height:1.5}
+.gauge{--progress:0%;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gauge-color,var(--orange)) var(--progress),#30363d 0);position:relative;margin:5px auto}
+.gauge:before{content:"";position:absolute;inset:7px;border-radius:50%;background:#14181d;box-shadow:inset 0 0 0 1px #ffffff0b}
+.gauge-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.25;max-width:100%}
+.gauge-inner strong{font-size:18px!important;color:var(--text)!important;margin:0!important;overflow-wrap:anywhere}
+.gauge-inner small{font-size:10px;color:var(--muted)}
+.calories .gauge{--gauge-color:#ff914d}.waterstat .gauge{--gauge-color:#65cfff}.sleepstat{color:#bba5ff}.sleepstat .gauge{--gauge-color:#bba5ff}.activitystat strong{font-size:22px!important}
+.nav{scroll-behavior:smooth;scroll-snap-type:x proximity}.navbtn{scroll-snap-align:start;transition:background .18s ease,color .18s ease,transform .18s ease}.navbtn:active{transform:scale(.97)}
+.page{animation:pageEnter .22s ease both}@keyframes pageEnter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.app-icon{background:transparent;border:0;object-fit:contain}.brandline .app-icon{width:38px;height:38px}.hero-icon{display:none!important}
+@media(max-width:700px){.quickstats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{padding:12px 8px}.gauge{width:82px;height:82px}.gauge-inner strong{font-size:16px!important}.stat small{font-size:11px}.topbar{gap:10px}.brand{font-size:25px}.top-actions{gap:7px}.nav{margin:0 -2px 8px;padding:8px 0 12px}.navbtn{flex-shrink:0}.welcome{border-radius:19px}.welcome>div{max-width:100%}#weeklyPlan{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* FitBros mobile usability refinement */
+.topbar{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.96);backdrop-filter:blur(14px);border-bottom:1px solid #262a30}
+.nav{position:sticky;top:62px;z-index:19;overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;scrollbar-width:none;background:rgba(9,10,12,.97);backdrop-filter:blur(12px);border-bottom:1px solid #222831}
+.nav::-webkit-scrollbar{display:none}
+.navbtn{flex:0 0 auto;transition:transform .2s ease,background .25s ease,box-shadow .25s ease}
+.page{animation:pageIn .28s ease both}
+@keyframes pageIn{from{opacity:.35;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+#activity .cards.two{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+#activityHistory .chips{position:sticky;top:122px;background:#0b0d10;padding:8px 0;z-index:3}
+@media(max-width:700px){.topbar{top:0}.nav{top:61px}#activity .cards.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#activity .cards.two>.panel{padding:12px;min-width:0}#activity .cards.two h3{font-size:14px}#activity .cards.two label{font-size:12px}#activity .cards.two input,#activity .cards.two select{padding:10px 8px;font-size:13px}#activity .cards.two .primary{width:100%;font-size:12px;padding:10px 5px}#activityHistory .chips{top:112px}}
+
+
+/* Daily reset control */
+.daily-reset-row{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:18px 0;padding:15px 17px;border:1px solid rgba(255,90,0,.22);border-radius:16px;background:rgba(255,255,255,.025)}.daily-reset-row p{margin:0;flex:1;min-width:190px}.reset-daily-btn{border-color:rgba(255,90,0,.45)!important;color:#ff7518!important;white-space:nowrap}@media(max-width:520px){.daily-reset-row{align-items:stretch}.reset-daily-btn{width:100%}}
+
+/* Mobile food details stay below the food choices */
+@media(max-width:800px){.food-layout{display:flex;flex-direction:column}.food-list{order:1}.selected-food{order:2;position:static;scroll-margin-top:90px}}
+
+/* Keep the fist emojis in left-to-right order so they face each other in RTL headings. */
+.fists-facing{direction:ltr;unicode-bidi:isolate;display:inline-block;white-space:nowrap}
+
+
+/* FitBros page-based mobile redesign */
+body{font-size:15px;color:#f8f9fb;line-height:1.65}h1,h2,h3,label,strong{letter-spacing:0}p,.muted{line-height:1.7}.section-title h2{font-size:22px;font-weight:900}.panel{box-shadow:0 8px 24px #0002}.welcome{min-height:unset;padding:22px}.welcome h1{font-size:clamp(25px,4vw,34px);line-height:1.35}.quickstats .stat{min-height:155px;justify-content:center}.food-toggle{margin:8px 0 12px;border-color:#4a2b19;background:#24160f;color:#ffb27a}.food-list.hidden,.chips.hidden{display:none!important}.food-layout{align-items:start}.selected-food{order:2}.food-item{min-height:66px}.food-item strong{font-size:15px}.food-item small{font-size:12px}.navbtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}.navbtn span{font-size:17px;line-height:1.3}.navbtn small{font-size:10px;font-weight:800;white-space:nowrap}.navbtn.active small{color:#fff}
+@media(max-width:700px){
+  .wrap{padding:12px 12px 100px}
+  .topbar{height:58px}
+  .nav{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:50;margin:0;padding:7px 7px calc(7px + env(safe-area-inset-bottom));display:flex;gap:5px;overflow-x:auto;overflow-y:hidden;background:rgba(12,14,17,.98);border-top:1px solid #30343b;border-bottom:0;box-shadow:0 -8px 28px #0007;backdrop-filter:blur(18px);scroll-snap-type:x mandatory}
+  .navbtn{flex:0 0 72px;min-width:72px;min-height:52px;padding:5px 4px;border:1px solid transparent;background:transparent;border-radius:12px;scroll-snap-align:center}
+  .navbtn.active{background:#ff6a001b;border-color:#7e3b16;box-shadow:none;color:#ff9a52}
+  .navbtn small{font-size:10px}
+  .quickstats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .stat{min-height:140px;padding:12px 8px}
+  .gauge{width:78px;height:78px}
+  .section-title{margin:19px 0 11px}
+  .section-title h2{font-size:20px}
+  .panel{padding:15px;border-radius:15px}
+  .welcome{padding:17px;margin-bottom:12px}
+  .welcome h1{font-size:25px}
+  .daily-reset-row{margin-bottom:14px}
+  #activity .cards.two{grid-template-columns:1fr}
+}
+
+
+/* App-like navigation: hidden outside the authenticated app, fixed on mobile. */
+#app.hidden .nav{display:none!important}
+#login:not(.hidden)~#app .nav,#setup:not(.hidden)~#app .nav{display:none!important}
+#app:not(.hidden) .nav{visibility:visible}
+.navbtn{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.page{scroll-margin-top:0}
+@media(max-width:700px){
+  html{scroll-behavior:auto}
+  #app .nav{position:fixed!important;top:auto!important;bottom:0!important;left:0!important;right:0!important;z-index:9999!important;padding-bottom:calc(8px + env(safe-area-inset-bottom))!important}
+  #app .wrap{padding-bottom:calc(94px + env(safe-area-inset-bottom))}
+}
+
+
+/* FitBros focused mobile UX and training log */
+@media(max-width:700px){.nav{justify-content:space-around;overflow:visible;gap:3px;padding:7px 6px calc(7px + env(safe-area-inset-bottom))}.navbtn{flex:1 1 0;min-width:0;max-width:100px}.navbtn small{font-size:11px}.quickstats{margin-top:8px}.quickstats .stat{min-height:124px}.body-maps{gap:12px}.body-map svg{width:min(100%,150px);height:auto}.workout-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.workout-fields input,.workout-fields select{min-width:0}.muscle-panel{padding:14px}.recovery-grid{grid-template-columns:1fr}.shortcut-card{min-width:0}}
+.workout-builder{margin-bottom:16px;border-color:rgba(255,90,0,.28);background:linear-gradient(145deg,rgba(255,90,0,.07),rgba(255,255,255,.025))}.workout-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}.workout-fields>div{min-width:0}.workout-fields input,.workout-fields select{width:100%;min-width:0}.body-maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:520px;margin:16px auto;text-align:center}.body-map{display:flex;flex-direction:column;align-items:center;gap:8px}.body-map svg{width:100%;max-width:175px;max-height:290px;overflow:visible}.body-base{fill:#333a42;stroke:#6a737c;stroke-width:1.4}.muscle-zone{fill:rgba(255,90,0,.12);stroke:#ff873d;stroke-width:1.1;stroke-linejoin:round;vector-effect:non-scaling-stroke;transition:fill .35s,stroke .35s,stroke-width .35s,opacity .35s;filter:drop-shadow(0 0 1px rgba(255,106,0,.18))}.recovery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.recovery-item{padding:12px;border:1px solid #292d33;border-radius:13px;background:#111418}.recovery-head{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:13px}.recovery-head span{color:#ff9a52;font-size:12px;white-space:nowrap}.recovery-item .progress{margin:8px 0;height:6px}.recovery-item small{color:#a8afb8;font-size:11px}.shortcut-card{display:flex;flex-direction:column;gap:8px}.shortcut-card .secondary{width:100%}.measure-details{padding:12px;margin:12px 0;border:1px solid #343941;border-radius:12px}.measure-details summary{font-weight:800;cursor:pointer;color:#ff9a52}.measure-details label{margin-top:10px}
+@media(min-width:701px){#app .nav{position:sticky;top:66px;z-index:20}.body-maps{gap:32px}}
+
+/* Focused dashboard, dedicated muscle map, and account settings */
+.home-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.home-shortcuts .panel{margin:0;min-width:0;padding:14px}
+.home-shortcuts h3{font-size:14px;line-height:1.45}
+.home-shortcuts .secondary{font-size:12px;padding:9px 8px}
+#home .needsSummary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+#muscles .muscle-panel{max-width:780px;margin-inline:auto}
+#muscles .body-maps{max-width:600px;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,5vw,42px);padding:16px 0}
+#muscles .body-map{background:radial-gradient(ellipse at 50% 30%,rgba(255,106,0,.07),transparent 55%),linear-gradient(160deg,#202832,#101318);border:1px solid #343e49;border-radius:20px;padding:14px 10px;box-shadow:inset 0 1px rgba(255,255,255,.04),0 8px 22px rgba(0,0,0,.18)}
+#muscles .body-map b{color:#ffad73;font-size:14px}
+#muscles .body-map svg{max-height:360px;max-width:210px;filter:drop-shadow(0 5px 9px rgba(0,0,0,.22))}
+#muscles .recovery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#muscles .recovery-item{padding:13px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border-color:rgba(255,255,255,.09);box-shadow:inset 0 1px rgba(255,255,255,.025)}
+#muscles .recovery-head span{color:#ffb078}
+#muscles .recovery-item .progress{height:8px;background:#292f36;border-radius:999px;overflow:hidden}
+#muscles .recovery-item .progress span{border-radius:999px;transition:width .4s,background .4s}
+.settings-panel{border-color:#373d45}
+.settings-panel .danger-action{width:100%;margin-top:12px;padding:12px;background:#351b1b;color:#ffaaaa;border:1px solid #713333}
+.settings-panel .daily-reset-row{margin-top:16px}
+#app main.wrap{overflow:visible;min-height:0}
+.page{scroll-margin-top:8px;min-height:50vh}
+@media(max-width:700px){
+  .home-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px}
+  .home-shortcuts .panel{padding:12px}
+  .home-shortcuts .secondary{min-height:40px;white-space:normal}
+  #muscles .body-maps{gap:9px;padding:8px 0}
+  #muscles .body-map{padding:10px 5px}
+  #muscles .body-map svg{width:100%;max-width:145px;max-height:255px}
+  #muscles .recovery-grid{grid-template-columns:1fr}
+  #muscles .muscle-panel{padding:12px}
+  #app .nav{justify-content:space-between;overflow-x:auto;overflow-y:hidden}
+  #app .navbtn{flex:1 0 0;min-width:0;padding-inline:2px}
+  #app .navbtn span{font-size:16px}
+  #app .navbtn small{font-size:9px}
+  #home .section-title{margin-top:15px}
+}
+@media(max-width:360px){.home-shortcuts{gap:6px}.home-shortcuts .panel{padding:10px}.home-shortcuts h3{font-size:12px}}
+
+/* Final mobile dashboard polish */
+#needsSummary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#needsSummary .needline{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;min-height:72px;padding:12px;background:#191e24;border:1px solid #2b323a;border-radius:12px;gap:4px}
+#needsSummary .needline b{text-align:right;overflow-wrap:anywhere}
+.page:not(.hidden){animation:pageEnter .24s ease-out both}
+@keyframes pageEnter{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+#home .quickstats{margin:10px 0 18px}
+#home .home-shortcuts .panel{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+#home .home-shortcuts .panel h3{min-height:42px}
+#home .home-shortcuts .panel .secondary{margin-top:auto}
+@media(max-width:700px){#needsSummary{grid-template-columns:repeat(2,minmax(0,1fr))}#needsSummary .needline{font-size:12px;padding:10px;min-height:76px}#home .quickstats{grid-template-columns:repeat(2,minmax(0,1fr))}#home .quickstats .stat{min-height:126px}#home .home-shortcuts .panel h3{font-size:13px;min-height:38px}}
+@media(prefers-reduced-motion:reduce){.page:not(.hidden){animation:none}html{scroll-behavior:auto!important}}
+/* Standalone account settings page */
+.settings-shell{min-height:100vh;background:radial-gradient(ellipse at 90% 0%,#25160e 0,transparent 36%),#090b0e}.settings-shell .topbar{position:sticky;top:0;z-index:10;background:rgba(9,11,14,.95);backdrop-filter:blur(12px);padding:0 max(16px,calc((100vw - 1000px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292f36}.settings-shell .brand{text-decoration:none}.settings-wrap{max-width:900px;padding-top:24px}.settings-wrap .section-title{margin-top:8px}.settings-wrap .panel{margin:14px 0}.settings-wrap h1{font-size:clamp(25px,4vw,34px);margin:0}.settings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.settings-grid>div{min-width:0}.settings-form .primary{margin-top:16px}.settings-actions{display:flex;gap:10px;flex-wrap:wrap}.settings-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 16px;border-radius:12px;font-weight:800}.settings-wrap .danger-action{padding:12px;background:#351b1b;color:#ffaaaa;border:1px solid #713333;border-radius:12px;font-weight:800}.navlink{text-decoration:none;color:inherit}@media(max-width:600px){.settings-shell .topbar{padding:0 12px}.settings-shell .top-actions span{font-size:11px}.settings-grid{grid-template-columns:1fr}.settings-actions>*{width:100%;text-align:center}}
+
+/* Exercise target-muscle chips */
+.workout-targets{grid-column:1/-1;padding:10px 12px;border:1px solid rgba(255,90,0,.22);border-radius:14px;background:rgba(255,90,0,.045)}.target-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}.target-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,90,0,.3);background:rgba(255,90,0,.09);font-size:.82rem}.target-chip b{color:var(--orange,#ff5a00)}.muscle-zone{stroke:rgba(255,255,255,.45);stroke-width:.7;transition:fill .25s,opacity .25s}
+
+/* Universal FitBros touch feedback: soft orange glow on every interactive control */
+:where(button,a,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],summary,.navbtn,.settings-link,.shortcut-card,.clickable){
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+  transition:transform .16s ease,box-shadow .18s ease,border-color .18s ease,background-color .18s ease,filter .18s ease;
+}
+:where(button,a,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],summary,.navbtn,.settings-link,.shortcut-card,.clickable):active{
+  transform:scale(.97);
+  filter:brightness(1.13);
+  box-shadow:0 0 0 2px rgba(255,90,0,.22),0 0 13px rgba(255,90,0,.42),inset 0 0 9px rgba(255,90,0,.10);
+  border-color:rgba(255,115,35,.9)!important;
+}
+:where(button,a,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],summary,.navbtn,.settings-link,.shortcut-card,.clickable):focus-visible{
+  outline:2px solid rgba(255,115,35,.95);
+  outline-offset:3px;
+  box-shadow:0 0 0 4px rgba(255,90,0,.12),0 0 18px rgba(255,90,0,.28);
+}
+@media(hover:hover) and (pointer:fine){
+  :where(button,a,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],summary,.navbtn,.settings-link,.shortcut-card,.clickable):hover:not(:disabled){
+    border-color:rgba(255,115,35,.65);
+    box-shadow:0 0 0 1px rgba(255,90,0,.12),0 0 15px rgba(255,90,0,.20);
+    filter:brightness(1.06);
+  }
+}
+:where(button:disabled,input:disabled){filter:saturate(.5);cursor:not-allowed}
+@media(prefers-reduced-motion:reduce){:where(button,a,[role="button"],input[type="button"],input[type="submit"],input[type="reset"],summary,.navbtn,.settings-link,.shortcut-card,.clickable){transition:none!important}}
+
+
+/* Reliable mobile press feedback: remove Android/WebView blue tap flash and add visible orange glow */
+html, body, body * { -webkit-tap-highlight-color: transparent !important; }
+button, a, [role="button"], input[type="button"], input[type="submit"], input[type="reset"], summary, select, label, .navbtn, .chip, .food-item, .pill, .textbtn, .settings-link, .donebtn, .deletebtn, .waterbtn {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+button:focus:not(:focus-visible), a:focus:not(:focus-visible), [role="button"]:focus:not(:focus-visible), input:focus:not(:focus-visible), select:focus:not(:focus-visible) { outline: none !important; }
+.fitbros-pressed, button.fitbros-pressed, a.fitbros-pressed, [role="button"].fitbros-pressed, input.fitbros-pressed, summary.fitbros-pressed, label.fitbros-pressed, .chip.fitbros-pressed, .food-item.fitbros-pressed, .pill.fitbros-pressed {
+  transform: scale(.965) !important;
+  filter: brightness(1.18) !important;
+  border-color: #ff7a24 !important;
+  box-shadow: 0 0 0 2px rgba(255,105,0,.28), 0 0 16px 4px rgba(255,94,0,.55), inset 0 0 12px rgba(255,112,25,.18) !important;
+  transition: transform .09s ease, box-shadow .12s ease, filter .12s ease !important;
+}
+@media (prefers-reduced-motion: reduce) { .fitbros-pressed { transition: none !important; } }
+
+/* Multi-item meal builder */
+.meal-basket{margin-top:16px;padding:14px;border:1px solid rgba(255,115,24,.28);background:linear-gradient(145deg,rgba(255,115,24,.07),rgba(255,255,255,.025))}
+.meal-basket h3{margin-bottom:8px}.basket-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 11px;margin:7px 0;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(0,0,0,.2)}.basket-row>div:first-child{display:flex;flex-direction:column;gap:3px;min-width:0}.basket-row strong{font-size:.9rem}.basket-row small{font-size:.75rem;color:var(--muted)}.basket-controls{flex-shrink:0}.basket-controls .qty-btn{font-size:1.1rem;color:#ff8750}.meal-basket #saveMealBasket:disabled{opacity:.45;filter:saturate(.3);cursor:not-allowed}.meal-basket #clearMealBasket{margin-top:8px;width:100%}
+
+/* Daily needs comparison: calorie, water and sleep for both accounts */
+.compare-needs-card{display:flex;flex-direction:column;gap:16px;min-width:0}
+.compare-needs-card h3{margin:0 0 2px}
+.compare-metric{display:flex;flex-direction:column;gap:7px}
+.compare-metric-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.88rem}
+.compare-metric-head b{font-size:.82rem;text-align:left;direction:rtl}
+.compare-metric small{color:var(--muted);font-size:.78rem;line-height:1.6}
+.compare-needs-card .progress{height:9px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.09)}
+.compare-needs-card .progress span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#ff5a00,#ff9a45);transition:width .35s ease}
+.compare-needs-card .water-progress span{background:linear-gradient(90deg,#ff7a18,#ffd166)}
+.compare-needs-card .sleep-progress span{background:linear-gradient(90deg,#a56eff,#d4b6ff)}
+
+/* Compact body measurements above each person's daily needs */
+.compare-body-stats{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px;padding:11px 12px;border:1px solid rgba(255,255,255,.09);border-radius:12px;background:rgba(255,255,255,.025);color:var(--muted,#aaa);font-size:.9rem}
+.compare-body-stats span{flex:1 1 120px;display:flex;justify-content:space-between;gap:8px}
+.compare-body-stats b{color:var(--white,#f5f5f5);white-space:nowrap}
+
+/* Real inline SVG icons for compare page; no icon-font dependency */
+.compare-needs-card .compare-metric-head .compare-metric-label{display:inline-flex;align-items:center;gap:10px;font-weight:800;white-space:nowrap}
+.compare-metric-icon,.compare-body-icon{width:42px;height:42px;flex:0 0 42px;display:inline-flex;align-items:center;justify-content:center;border-radius:14px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);font-style:normal}
+.compare-icon-svg{width:23px;height:23px;display:block}
+.calories-icon{color:#ff7a24;background:rgba(255,106,0,.12);border-color:rgba(255,106,0,.2)}
+.water-icon{color:#35bff5;background:rgba(35,181,245,.12);border-color:rgba(35,181,245,.2)}
+.sleep-icon{color:#b58aff;background:rgba(165,110,255,.13);border-color:rgba(165,110,255,.2)}
+.ruler-icon{color:#ff9b55;background:rgba(255,115,24,.1)}
+.weight-icon{color:#54c7fa;background:rgba(53,191,245,.1)}
+.compare-body-stats span{align-items:center;justify-content:flex-start;gap:9px;min-width:0}
+.compare-body-stats span>span{display:inline;flex:0 0 auto;color:var(--muted,#aaa)}
+.compare-body-stats b{margin-inline-start:auto}
+@media(max-width:420px){.compare-metric-icon,.compare-body-icon{width:36px;height:36px;flex-basis:36px;border-radius:12px}.compare-icon-svg{width:21px;height:21px}.compare-metric-head{gap:8px}.compare-metric-head b{font-size:.76rem}}
+
+/* Icon visibility hardening: inline SVG does not depend on external icon fonts */
+.compare-metric-icon,.compare-body-icon{overflow:visible;line-height:0}
+.compare-icon-svg{display:block!important;width:24px!important;height:24px!important;min-width:24px;opacity:1!important;visibility:visible!important}
+.compare-icon-svg path{stroke:currentColor!important;fill:none!important;vector-effect:non-scaling-stroke}
+
+/* Custom food form */
+.custom-food-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.custom-food-grid label{display:flex;flex-direction:column;gap:6px;font-size:.92rem;color:var(--text,#f4f4f4)}
+.custom-food-grid input,.custom-food-grid select{width:100%;min-width:0;box-sizing:border-box}
+#toggleCustomFood{margin:10px 0;width:100%}
+#customFoodForm{margin:12px 0;padding:16px}
+@media(max-width:480px){.custom-food-grid{grid-template-columns:1fr}}
+/* Personal daily macros; local to the signed-in user's dashboard */
+.macro-panel{margin-top:12px}.macro-panel .facts{grid-template-columns:repeat(4,minmax(0,1fr))}.macro-track{height:5px;background:#30343a;border-radius:99px;overflow:hidden;margin-top:8px}.macro-track span{display:block;height:100%;background:var(--fact);border-radius:99px}@media(max-width:700px){.macro-panel .facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Meal actions and subtle confirmation toast */
+.food-log-actions{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}.food-log-actions button{font-size:.8rem;padding:6px 12px}.danger-btn{border-color:rgba(255,90,90,.35)!important;color:#ff8a8a!important}.fit-toast{position:fixed;z-index:9999;bottom:calc(84px + env(safe-area-inset-bottom));left:50%;transform:translate(-50%,14px);opacity:0;pointer-events:none;background:rgba(20,25,23,.96);color:#dfffea;border:1px solid rgba(114,214,161,.45);padding:12px 18px;border-radius:14px;box-shadow:0 8px 30px #0005;transition:opacity .25s ease,transform .25s ease;max-width:calc(100vw - 32px);text-align:center}.fit-toast.show{opacity:1;transform:translate(-50%,0)}.weight-model{margin:14px 0;padding:16px}.weight-model label{display:block;margin:10px 0}.weight-model input[type=checkbox]{width:auto;margin-inline-end:8px}.weight-model select{width:100%}
+
+/* Meal history edit/delete controls and subtle confirmation */
+.food-log-actions{display:flex;gap:6px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap}.food-log-actions button{font-size:12px;padding:6px 10px}.food-log-actions .danger-action{border-color:rgba(255,90,90,.35);color:#ff9292}.food-toast{position:fixed;z-index:9999;bottom:calc(86px + env(safe-area-inset-bottom));left:50%;transform:translate(-50%,12px);opacity:0;pointer-events:none;background:rgba(22,27,25,.96);color:#d8ffe6;border:1px solid rgba(92,220,145,.32);padding:11px 16px;border-radius:14px;box-shadow:0 8px 30px #0005;transition:opacity .22s ease,transform .22s ease;font-size:14px;max-width:90vw;text-align:center}.food-toast.show{opacity:1;transform:translate(-50%,0)}
+/* Live GPS tracker */
+.gps-panel{border:1px solid rgba(255,112,24,.45);box-shadow:0 0 24px rgba(255,90,0,.06)}.gps-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}.gps-stats>div{padding:14px;border:1px solid var(--border,rgba(255,255,255,.1));border-radius:14px;background:rgba(255,255,255,.025);display:flex;flex-direction:column;gap:7px}.gps-stats small{color:var(--muted,#aaa)}.gps-stats strong{font-size:1.25rem;color:var(--white,#f5f5f5);direction:ltr;text-align:right}.gps-actions{display:flex;gap:9px;flex-wrap:wrap}.gps-actions button{flex:1;min-width:125px}.gps-actions button:disabled{opacity:.4;cursor:not-allowed}@media(max-width:520px){.gps-actions{display:grid;grid-template-columns:1fr 1fr}.gps-actions #gpsStart{grid-column:1/-1}.gps-stats strong{font-size:1.1rem}}
+
+/* Live GPS route map */
+.gps-map-title{margin:18px 0 10px}.gps-map{height:260px;width:100%;border-radius:16px;overflow:hidden;border:1px solid rgba(255,112,24,.35);background:#202328;z-index:0}.gps-map .leaflet-control-attribution{font-size:9px}.gps-route-mini{height:100px;width:100%;border-radius:12px;background:#202328;display:block;margin-top:10px}.gps-map .leaflet-tile{filter:saturate(.8)}
+
+.home-workout-panel{border-color:rgba(255,101,0,.42);background:linear-gradient(145deg,#1c130d,#141414 60%)}.home-workout-panel h3{color:#ff9a54}.target-chips{display:flex;flex-wrap:wrap;gap:7px;margin:8px 0 14px}.target-chip{background:#2a211b;border:1px solid #50331f;border-radius:999px;padding:5px 9px;font-size:11px;color:#ffd0ad}.workout-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}@media(max-width:520px){.workout-fields{grid-template-columns:1fr 1fr}.workout-fields>div:last-child{grid-column:1/-1}}
+
+/* FitBros glassmorphism polish: soft iOS-inspired depth without heavy blur */
+:root{--glass-bg:rgba(24,29,36,.72);--glass-line:rgba(255,255,255,.095);--glass-highlight:rgba(255,255,255,.045)}
+body{background:radial-gradient(ellipse at 8% 0%,rgba(255,106,0,.105),transparent 36%),radial-gradient(ellipse at 100% 28%,rgba(91,157,255,.07),transparent 32%),#090b0f}
+.topbar,.nav{background:rgba(11,14,19,.76)!important;backdrop-filter:blur(24px) saturate(155%);-webkit-backdrop-filter:blur(24px) saturate(155%);border-color:rgba(255,255,255,.085)!important}
+.panel,.person-card,.day-panel,.challenge,.login-card,.stat,.food-item,.selected-food,.gps-stats>div{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018)),var(--glass-bg);border:1px solid var(--glass-line);box-shadow:0 12px 34px rgba(0,0,0,.16),inset 0 1px 0 var(--glass-highlight);backdrop-filter:blur(16px) saturate(130%);-webkit-backdrop-filter:blur(16px) saturate(130%)}
+.welcome{background:linear-gradient(120deg,rgba(255,106,0,.17),rgba(24,30,39,.75) 58%,rgba(255,255,255,.035))!important;border:1px solid rgba(255,145,77,.2)!important;box-shadow:0 18px 44px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.08)}
+.stat,.panel,.person-card,.challenge,.food-item,.primary,.secondary,.waterbtn{transition:transform .22s cubic-bezier(.2,.8,.2,1),border-color .22s ease,box-shadow .22s ease}
+@media(hover:hover){.panel:hover,.person-card:hover,.food-item:hover{border-color:rgba(255,255,255,.15);box-shadow:0 16px 38px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.07)}}
+.primary{box-shadow:0 5px 18px rgba(255,106,0,.17)}
+.food-toast{background:rgba(25,34,31,.78)!important;border:1px solid rgba(140,255,192,.26)!important;backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);box-shadow:0 16px 48px rgba(0,0,0,.28)!important;border-radius:18px!important}
+.success-pulse{position:fixed;inset:0;z-index:10050;display:grid;place-items:center;padding:24px;background:rgba(5,8,12,.18);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .22s ease}
+.success-pulse.show{opacity:1}
+.success-pulse-card{width:min(290px,calc(100vw - 48px));padding:25px 22px 23px;border:1px solid rgba(255,255,255,.17);border-radius:28px;text-align:center;display:flex;align-items:center;flex-direction:column;gap:8px;background:linear-gradient(145deg,rgba(38,48,54,.88),rgba(19,25,31,.84));box-shadow:0 24px 80px rgba(0,0,0,.38),inset 0 1px 0 rgba(255,255,255,.14);backdrop-filter:blur(32px) saturate(165%);-webkit-backdrop-filter:blur(32px) saturate(165%);transform:translateY(12px) scale(.94);transition:transform .32s cubic-bezier(.16,1,.3,1)}
+.success-pulse.show .success-pulse-card{transform:translateY(0) scale(1)}
+.success-check-wrap{width:76px;height:76px;margin-bottom:5px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,rgba(102,224,158,.19),rgba(102,224,158,.035) 68%);box-shadow:0 0 35px rgba(102,224,158,.1)}
+.success-check-wrap svg{width:58px;height:58px;overflow:visible}
+.success-check-circle{fill:rgba(95,220,151,.11);stroke:#72e3a7;stroke-width:2;stroke-dasharray:145;stroke-dashoffset:145}
+.success-check-mark{fill:none;stroke:#8ff0b8;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:38;stroke-dashoffset:38}
+.success-pulse.show .success-check-circle{animation:checkCircle .45s ease forwards}
+.success-pulse.show .success-check-mark{animation:checkMark .32s .28s ease forwards}
+.success-title{font-size:19px;font-weight:850;color:#f5fff8;letter-spacing:-.2px}
+.success-subtitle{font-size:13px;color:rgba(235,245,240,.72)}
+@keyframes checkCircle{to{stroke-dashoffset:0}}
+@keyframes checkMark{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.success-pulse,.success-pulse-card{transition:none}.success-pulse.show .success-check-circle,.success-pulse.show .success-check-mark{animation:none;stroke-dashoffset:0}}
+
+/* AI food photo analysis */
+.ai-photo-btn{width:100%;margin-bottom:8px;background:linear-gradient(120deg,#ff6b12,#ff9a42);box-shadow:0 8px 28px rgba(255,100,25,.18)}
+.ai-food-overlay{position:fixed;inset:0;z-index:11000;display:grid;place-items:center;padding:14px;background:rgba(4,7,10,.68);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.ai-food-overlay.hidden{display:none!important}.ai-food-dialog{position:relative;width:min(600px,100%);max-height:92dvh;overflow:auto;padding:25px 18px 20px;border:1px solid rgba(255,255,255,.15);border-radius:25px;background:linear-gradient(145deg,rgba(31,37,43,.97),rgba(12,15,19,.97));box-shadow:0 28px 90px rgba(0,0,0,.5)}.ai-food-dialog h2{margin:0 0 12px;padding:0 0 0 48px;line-height:1.35;text-align:right}.ai-close{position:absolute!important;left:16px!important;top:16px!important;z-index:5;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;width:42px!important;min-width:42px!important;height:42px!important;min-height:42px!important;margin:0!important;padding:0 0 2px!important;overflow:hidden;border:1px solid rgba(255,115,35,.75);border-radius:50%;background:linear-gradient(145deg,#ff7a18,#f04b00);color:#fff;font-family:Arial,sans-serif;font-size:28px;font-weight:700;line-height:1!important;text-align:center;box-shadow:0 4px 14px rgba(255,90,0,.28);cursor:pointer;transition:transform .16s ease,filter .16s ease;appearance:none;-webkit-appearance:none}.ai-close:active{transform:scale(.92)}.ai-close:focus-visible{outline:2px solid #fff;outline-offset:3px}.ai-upload{display:block;margin:14px 0;padding:13px;border:1px dashed #ff8a3d88;border-radius:14px;text-align:center;background:#ff74100c}.ai-upload input{display:block;width:100%;margin-top:9px}.ai-preview{display:block;width:100%;max-height:220px;object-fit:contain;margin:10px auto;border-radius:14px;background:#0005}.ai-food-items{display:grid;gap:10px;margin:14px 0}.ai-food-item{padding:13px;border:1px solid #ffffff18;border-radius:15px;background:#ffffff08}.ai-food-item-head{display:flex;gap:8px;align-items:center;margin-bottom:9px}.ai-food-item-head input{flex:1;min-width:0}.ai-food-item-grid,.ai-total-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ai-food-dialog label{font-size:13px}.ai-food-dialog input,.ai-food-dialog select{width:100%;margin-top:5px}.ai-food-dialog button{margin-top:9px}.ai-total-grid{margin:10px 0 14px}.ai-remove-item{min-width:38px!important;padding:8px!important;color:#ff8a8a!important}.ai-food-dialog [disabled]{opacity:.45}@media(min-width:520px){.ai-food-item-grid,.ai-total-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* Cinematic FitBros startup splash */
+.fitbros-splash{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#070707 url('./background.png') center center/cover no-repeat;opacity:1;visibility:visible;transition:opacity .65s cubic-bezier(.22,1,.36,1),visibility .65s;isolation:isolate;animation:splashAutoDismiss 5s ease forwards;animation-delay:0s;will-change:opacity}
+.fitbros-splash:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.72),rgba(0,0,0,.82)),radial-gradient(ellipse at 50% 44%,rgba(255,91,0,.055),transparent 46%);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:-1}
+.fitbros-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none;animation:none}
+@keyframes splashAutoDismiss{0%,86%{opacity:1;visibility:visible;pointer-events:auto}100%{opacity:0;visibility:hidden;pointer-events:none}}
+.splash-content{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;padding:24px;text-align:center;animation:splashRise 1s cubic-bezier(.2,.75,.25,1) both}
+.splash-icon{display:block;width:clamp(150px,43vw,230px);height:clamp(150px,43vw,230px);object-fit:contain;border-radius:27%;filter:drop-shadow(0 0 16px rgba(255,91,0,.45));animation:splashIconIn 1.05s cubic-bezier(.2,.75,.25,1) both}
+.splash-signature{margin-top:26px;font-family:'Dancing Script','Brush Script MT',cursive;font-size:clamp(31px,8.2vw,47px);font-weight:600;line-height:1.18;white-space:nowrap;text-shadow:0 3px 16px #000,0 0 22px rgba(255,89,0,.18);direction:ltr}
+.splash-signature span{font-family:inherit;color:#e7e7e7;font-weight:500}.splash-signature strong{font-family:inherit;color:#ff6a0a;font-weight:700}
+.splash-underline{height:3px;width:180px;margin:8px 0 46px;border-radius:99px;background:linear-gradient(90deg,transparent,#ff5a00 16%,#ff8a2a 75%,transparent);box-shadow:0 0 13px rgba(255,90,0,.48);transform:rotate(-4deg);animation:splashLine 1.1s .25s both}
+.splash-progress{direction:ltr;width:132px;height:7px;overflow:hidden;border-radius:99px;background:rgba(255,255,255,.13);box-shadow:inset 0 1px 2px #0008}
+.splash-progress span{display:block;width:38%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#ff4c00,#ff8b24);box-shadow:0 0 12px rgba(255,90,0,.6);animation:splashLoading 1.35s cubic-bezier(.45,0,.55,1) infinite}
+.splash-glow{position:absolute;width:220px;height:220px;border-radius:50%;filter:blur(90px);background:#ff5a00;opacity:.13;pointer-events:none}.splash-glow-one{top:-110px;left:-100px}.splash-glow-two{bottom:-130px;right:-80px;opacity:.18}
+@keyframes splashRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes splashIconIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}
+@keyframes splashLine{from{opacity:0;transform:scaleX(.4) rotate(-4deg)}to{opacity:1;transform:scaleX(1) rotate(-4deg)}}
+@keyframes splashLoading{0%{transform:translateX(-140%)}55%{transform:translateX(145%)}100%{transform:translateX(330%)}}
+@media(prefers-reduced-motion:reduce){.fitbros-splash,.splash-content,.splash-icon,.splash-underline,.splash-progress span{animation:none!important;transition:none!important}}
+
+/* Smooth, continuous splash loading bar and compact daily history */
+.splash-progress span{width:0;animation:splashLoading 4.55s linear forwards!important;will-change:width,transform;transform:translateZ(0)}@keyframes splashLoading{0%{width:0}100%{width:100%}}.history-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.history-metrics>div{background:#1d2228;border:1px solid #2d343c;border-radius:11px;padding:10px}.history-metrics small{display:block;color:var(--muted);font-size:11px}.history-metrics b{display:block;color:#ffb27a;font-size:14px;margin-top:3px}.history-day h3{margin-bottom:12px}@media(min-width:650px){.history-metrics{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+.history-day-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:right;gap:12px;background:transparent;border:0;color:var(--white);padding:2px 0 12px;cursor:pointer}.history-day-toggle h3{margin:0}.history-day-content{padding-top:4px}.history-day-food{margin-top:12px}.history-food-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #ffffff12}.history-food-row:last-child{border-bottom:0}.history-day-actions{display:flex;justify-content:flex-end;margin-top:12px}
+
+/* Explicit left-to-right progress fill, independent of the RTL page direction */
+.splash-progress{direction:ltr;position:relative;isolation:isolate}
+.splash-progress span{display:block;width:100%!important;transform:scaleX(0);transform-origin:left center;animation:splashFillLTR 4.55s linear forwards!important}
+@keyframes splashFillLTR{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.history-day-toggle{direction:ltr;flex-direction:row;text-align:left}
+.history-day-toggle>*{direction:rtl}
+.history-date-title{font-weight:700}
+.history-chevron{display:inline-block;margin-inline-start:5px;transition:transform .2s ease}
+.history-day-toggle[aria-expanded="true"] .history-chevron{transform:rotate(180deg)}
+.history-food-row span{display:flex;flex-direction:column;gap:3px}
+.history-food-row span small{font-size:12px}
+.challenge-submetric{margin-top:10px}.challenge-submetric small{display:block;margin:6px 0;color:var(--muted,#aaa)}.challenge-submetric .progress{height:8px;margin-top:4px}
+/* Food catalog hide controls */
+.food-row{display:flex;align-items:stretch;gap:5px;min-width:0}.food-row .food-item{flex:1;min-width:0;width:100%;}
+
+/* FitBros exercise search */
+.workout-search-results{display:grid;gap:7px;max-height:260px;overflow:auto;margin:8px 0 12px;padding:5px;border:1px solid #38312c;border-radius:14px;background:#111418}.workout-result{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;text-align:right;padding:11px 12px;border:1px solid #2d3035;border-radius:10px;background:#1a1d21;color:#f4f4f5;cursor:pointer}.workout-result:active,.workout-result.selected{border-color:#ff5a00;background:rgba(255,90,0,.13)}.workout-result small{white-space:nowrap;color:#ffab70;font-size:11px}.home-workout-panel #workoutSearch{border-color:#5b3825;background:#101114}.home-workout-panel #workoutSearch:focus{outline:1px solid #ff5a00;box-shadow:0 0 0 3px #ff5a0022}.workout-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.workout-fields>div:first-child{grid-column:1/-1}
+/* Workout builder: clear, comfortable inputs and searchable exercise picker */
+.home-workout-panel .workout-search-results{position:relative;z-index:4;max-height:300px;padding:8px;background:#101318;border:1px solid #59402e;box-shadow:0 12px 28px #0008}
+.home-workout-panel .workout-result{min-height:48px;background:#1b2026;border:1px solid #343b43;border-radius:12px;color:#f7f7f7}
+.home-workout-panel .workout-result:active,.home-workout-panel .workout-result.selected{background:#382113;border-color:#ff6500}
+.home-workout-panel .workout-result small{white-space:nowrap;color:#ffb47c;font-size:11px}
+.home-workout-panel .workout-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:14px 0}
+.home-workout-panel .workout-fields>div{min-width:0;background:#15191e;border:1px solid #343a42;border-radius:14px;padding:10px}
+.home-workout-panel .workout-fields label{display:flex;align-items:center;gap:7px;min-height:30px;font-size:13px;color:#e8e9ec}
+.home-workout-panel .workout-fields input{height:52px;margin:7px 0 0;padding:12px 14px;border:1px solid #424a54;background:#090b0e;border-radius:11px;font-size:18px;text-align:center;color:#fff}
+.home-workout-panel .workout-fields input:focus{border-color:#ff780f;box-shadow:0 0 0 3px #ff780f22}
+.home-workout-panel label[for="workoutWeight"]:before{content:'🏋️';font-size:17px}
+.home-workout-panel label[for="workoutSets"]:before{content:'▦';font-size:18px;color:#ff8a35}
+.home-workout-panel label[for="workoutReps"]:before{content:'🔁';font-size:15px}
+.home-workout-panel label[for="workoutSeconds"]:before{content:'⏱️';font-size:15px}
+.home-workout-panel label[for="workoutDate"]:before{content:'📅 ';}
+.home-workout-panel label[for="workoutSearch"]:before{content:'🔎 ';}
+@media(max-width:480px){.home-workout-panel .workout-fields{gap:8px}.home-workout-panel .workout-fields>div{padding:8px}.home-workout-panel .workout-fields input{height:48px;font-size:17px}.home-workout-panel .workout-fields label{font-size:12px}}
+
+/* Workout picker: searchable results + complete exercise catalogue */
+.home-workout-panel .workout-all-select{display:block!important;visibility:visible!important;width:100%;min-height:58px;margin:8px 0 14px;padding:14px 44px 14px 14px;border:1px solid #4b535e;border-radius:15px;background:#101419;color:#f7f7f8;font-size:17px;line-height:1.5;appearance:auto;direction:rtl}
+.home-workout-panel .workout-all-select:focus{outline:0;border-color:#ff780f;box-shadow:0 0 0 3px #ff780f22}
+.home-workout-panel #workoutSearch{min-height:58px;padding:14px 16px;border:1px solid #4b535e;border-radius:15px;color:#fff;font-size:17px}
+.home-workout-panel #workoutSearch::placeholder{color:#9da5af;opacity:1}
+.home-workout-panel .workout-search-results{max-height:340px;gap:8px;padding:9px;background:#11151a;border:1px solid #363e47;border-radius:16px}
+.home-workout-panel .workout-result{min-height:54px;padding:12px 14px;border-radius:13px;font-size:15px;line-height:1.5}
+.home-workout-panel .workout-result span{flex:1;min-width:0}
+.home-workout-panel .workout-fields>div{position:relative;background:linear-gradient(145deg,#20262d,#14181d);border:1px solid #3b444f;border-radius:16px;padding:12px;box-shadow:inset 0 1px 0 #ffffff08}
+.home-workout-panel .workout-fields label{font-size:13px;font-weight:750;line-height:1.5;color:#f2c09d}
+.home-workout-panel .workout-fields input{width:100%;box-sizing:border-box;min-height:54px;border:1px solid #4b5662;border-radius:12px;background:#090c10;color:#fff;text-align:center;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.home-workout-panel .workout-fields input::placeholder{color:#818a95}
+.home-workout-panel .workout-fields input:focus{outline:0;border-color:#ff780f;box-shadow:0 0 0 3px #ff780f20}
+@media(max-width:480px){.home-workout-panel .workout-all-select,.home-workout-panel #workoutSearch{min-height:54px;font-size:16px}.home-workout-panel .workout-fields>div{padding:10px}}
+
+/* FitBros workout catalog: food-catalog-like browsing and friendly feedback */
+.home-workout-panel .workout-title{display:flex;align-items:center;gap:12px}
+.workout-dumbbell-icon{width:38px;height:30px;flex:0 0 auto;color:#ff6a00;filter:drop-shadow(0 0 7px #ff5a0040)}
+.home-workout-panel .workout-category-chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 10px}
+.home-workout-panel .workout-category-chips button{border:1px solid #383b40;border-radius:15px;background:#202328;color:#e9e9e9;padding:9px 13px;font:inherit;font-size:14px;cursor:pointer;transition:transform .16s,background .16s,border-color .16s}
+.home-workout-panel .workout-category-chips button.active{background:#3a2115;border-color:#ff6a00;color:#ffb27d;box-shadow:0 0 0 1px #ff6a0025}
+.home-workout-panel .workout-search-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-height:420px;overflow:auto;padding:3px 2px 8px;margin:8px 0 16px}
+.home-workout-panel .workout-result{display:flex;align-items:center;gap:9px;text-align:right;min-width:0;min-height:68px;padding:11px;border:1px solid #353940;border-radius:15px;background:linear-gradient(145deg,#252930,#1c1f24);color:#f4f4f4;cursor:pointer;transition:transform .16s,border-color .16s,box-shadow .16s}
+.home-workout-panel .workout-result:active{transform:scale(.98)}
+.home-workout-panel .workout-result.selected,.home-workout-panel .workout-result:hover{border-color:#ff6a00;box-shadow:0 0 0 1px #ff6a0033;background:linear-gradient(145deg,#30261f,#202126)}
+.home-workout-panel .workout-result-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:11px;background:#3b2519;color:#ff9a52;font-size:18px}
+.home-workout-panel .workout-result-name{min-width:0;flex:1;font-weight:700;font-size:14px;line-height:1.45;overflow-wrap:anywhere}
+.home-workout-panel .workout-result-name small{display:block;color:#b8bbc1;font-size:11px;font-weight:500;margin-top:3px}
+.home-workout-panel .workout-result-add{color:#ff8a38;font-size:21px;font-weight:700}
+.home-workout-panel .workout-empty{grid-column:1/-1;padding:18px;text-align:center;border:1px dashed #4b4e54;border-radius:14px}
+@media(max-width:480px){.home-workout-panel .workout-search-results{grid-template-columns:1fr;max-height:360px}.home-workout-panel .workout-result{min-height:62px}.home-workout-panel .workout-category-chips button{font-size:12px;padding:8px 10px}}
+
+/* FitBros workout picker: real live results directly under search */
+.nav-dumbbell{display:grid!important;place-items:center;width:30px;height:30px;color:var(--orange,#ff5a00)}
+.nav-dumbbell svg{display:block;width:29px;height:24px;max-width:100%;}
+.workout-title .workout-dumbbell-icon{width:26px!important;height:20px!important}
+.home-workout-panel .workout-category-chips{display:none!important}
+.home-workout-panel #workoutSearchResults{display:none;grid-template-columns:1fr;gap:8px;max-height:360px;overflow-y:auto;margin:8px 0 12px;padding:8px;border:1px solid #45404a;border-radius:16px;background:#111419;box-shadow:0 10px 25px #0005}
+.home-workout-panel #workoutSearchResults.is-open{display:grid!important}
+.home-workout-panel #workoutSearchResults .workout-empty{display:block;margin:4px;padding:12px;color:#b8bdc5;font-size:14px;line-height:1.7}
+.home-workout-panel .workout-result{display:flex;min-height:62px;align-items:center;gap:11px;width:100%;padding:10px 12px;border:1px solid #343a43;border-radius:13px;background:linear-gradient(135deg,#242931,#191d22);color:#f8f8f8;text-align:right}
+.home-workout-panel .workout-result-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;border-radius:12px;background:#3a2519;color:#ff9148}
+.home-workout-panel .workout-result-icon svg{display:block;width:25px;height:25px;max-width:100%}
+.home-workout-panel .workout-result-name{flex:1;min-width:0;line-height:1.45;overflow-wrap:anywhere}
+.home-workout-panel .workout-result-name small{display:block;margin-top:3px;color:#ffb57e;font-size:11px}
+.home-workout-panel .workout-result-add{flex:0 0 auto;color:#ff7a18;font-size:23px}
+.home-workout-panel .workout-all-toggle{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;margin:10px 0 14px;padding:12px 16px;border:1px solid #5a3824;border-radius:15px;background:linear-gradient(135deg,#2c211b,#1b1d21);color:#ffad70;font-weight:800;font-size:16px;cursor:pointer;transition:background .2s,transform .15s,border-color .2s}
+.home-workout-panel .workout-all-toggle:active{transform:scale(.985);background:#402617}
+.home-workout-panel .workout-all-toggle svg{width:24px;height:24px;color:#ff7a18}
+.home-workout-panel .workout-all-toggle .toggle-chevron{margin-inline-start:auto;font-size:20px}
+.home-workout-panel .workout-select-label{display:none!important}
+.home-workout-panel .workout-all-select{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;opacity:0!important;pointer-events:none!important}
+
+/* FINAL mobile workout picker: no oversized/white controls; real live results */
+.nav .nav-dumbbell{display:grid!important;visibility:visible!important;opacity:1!important;place-items:center;width:32px;height:30px;color:#ff7a18!important;flex:0 0 32px}
+.nav .nav-dumbbell svg{display:block!important;visibility:visible!important;opacity:1!important;width:32px!important;height:24px!important;overflow:visible}
+.home-workout-panel .workout-title:before{content:none!important;display:none!important}
+.home-workout-panel #workoutSearchResults{display:none;position:relative;z-index:20;width:100%;box-sizing:border-box;grid-template-columns:1fr;gap:8px;max-height:360px;overflow-y:auto;margin:8px 0 12px;padding:8px;border:1px solid #45404a;border-radius:16px;background:#111419;box-shadow:0 10px 25px #0005}
+.home-workout-panel #workoutSearchResults.is-open{display:grid!important}
+.home-workout-panel .workout-all-toggle{display:flex!important;position:relative;align-items:center;justify-content:space-between;width:100%;min-height:46px;margin:8px 0 14px;padding:10px 14px;border:1px solid #4a382b!important;border-radius:12px!important;background:#171a1f!important;color:#ffad70!important;font-size:15px!important;box-shadow:none!important;line-height:1.4}
+.home-workout-panel .workout-all-toggle svg{display:none!important}
+.home-workout-panel .workout-all-toggle .toggle-chevron{margin-inline-start:0!important}
+.home-workout-panel .workout-search-results .workout-result{background:#20252b!important;color:#f8f8f8!important;border:1px solid #383f47!important}
+.home-workout-panel .workout-search-results .workout-result:active,.home-workout-panel .workout-search-results .workout-result.selected{background:#342217!important;border-color:#ff7a18!important}
+
+
+/* CementFit store shortcut on FitBros home */
+.cementfit-promo{grid-column:1/-1;display:grid;grid-template-columns:minmax(100px, .78fr) minmax(0,1.5fr);align-items:center;gap:16px;overflow:hidden;position:relative;border:1px solid rgba(255,90,0,.36);background:radial-gradient(circle at 12% 15%,rgba(255,90,0,.17),transparent 42%),linear-gradient(135deg,#191919,#0b0c0e 72%);box-shadow:0 12px 32px rgba(0,0,0,.24)}
+.cementfit-promo:before{content:"";position:absolute;top:0;left:12%;right:12%;height:2px;background:linear-gradient(90deg,transparent,#ff5a00,transparent)}
+.cementfit-promo-art{min-width:0;aspect-ratio:1/1;border-radius:15px;overflow:hidden;background:#050505;border:1px solid rgba(255,90,0,.22);box-shadow:0 0 25px rgba(255,90,0,.09)}
+.cementfit-promo-art img{display:block;width:100%;height:100%;object-fit:cover}
+.cementfit-promo-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.cementfit-kicker{font-size:10px;font-weight:900;letter-spacing:2px;color:#ff8a43;direction:ltr}
+.cementfit-promo-copy h3{margin:0;font-size:clamp(16px,3vw,21px);line-height:1.45}
+.cementfit-promo-copy p{margin:0;font-size:12px;line-height:1.8}
+.cementfit-visit{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:5px;min-height:43px;padding:10px 15px;border-radius:12px;color:#fff;font-weight:900;font-size:13px;background:linear-gradient(135deg,#ff6a13,#d94700);border:1px solid rgba(255,170,110,.38);box-shadow:0 7px 20px rgba(255,90,0,.2);transition:transform .18s,box-shadow .18s}
+.cementfit-visit svg{width:18px;height:18px;flex:none}
+.cementfit-visit:active{transform:scale(.97);box-shadow:0 0 0 rgba(255,90,0,0)}
+@media(max-width:500px){.cementfit-promo{grid-template-columns:100px minmax(0,1fr);gap:12px;padding:12px!important}.cementfit-promo-art{border-radius:12px}.cementfit-promo-copy p{font-size:11px}.cementfit-visit{min-height:40px;padding:9px 12px;font-size:12px}}
+@media(max-width:360px){.cementfit-promo{grid-template-columns:78px minmax(0,1fr);gap:9px}.cementfit-promo-copy h3{font-size:14px}.cementfit-promo-copy p{font-size:10px}.cementfit-visit{font-size:11px;padding:8px 10px}}
+
+/* Shared activity toggle */
+.joint-activity-panel{margin:0 0 14px;border-color:rgba(255,106,0,.45)}.joint-activity-toggle{display:flex;align-items:flex-start;gap:12px;cursor:pointer;margin:0!important}.joint-activity-toggle input{width:22px;height:22px;min-width:22px;accent-color:#ff6a00;margin:3px 0 0}.joint-activity-toggle span{display:flex;flex-direction:column;gap:6px}.joint-activity-toggle strong{color:#fff;font-size:1rem}.joint-activity-toggle small{color:var(--muted,#aaa);font-size:.88rem;line-height:1.6}
+
+/* Per-activity shared challenge switch */
+.per-activity-joint{display:flex;align-items:flex-start;gap:10px;padding:12px;margin:12px 0;border:1px solid rgba(255,106,0,.28);border-radius:14px;background:rgba(255,106,0,.045)}.per-activity-joint input{width:20px;height:20px;min-width:20px;accent-color:#ff6a00;margin:3px 0 0}.per-activity-joint span{display:flex;flex-direction:column;gap:4px}.per-activity-joint strong{font-size:.92rem}.per-activity-joint small{font-size:.8rem;line-height:1.5;color:var(--muted,#aaa)}
+
+
+/* Premium neon dashboard + dimensional interactive recovery anatomy */
+.stat{border-color:color-mix(in srgb,currentColor 25%,#292f37);background:radial-gradient(ellipse at 50% 0%,color-mix(in srgb,currentColor 13%,transparent),transparent 72%),linear-gradient(145deg,#1b2027,#101317);box-shadow:inset 0 1px 0 #ffffff12,0 8px 24px #0005;transition:transform .22s,border-color .22s,box-shadow .22s}
+.stat:hover{transform:translateY(-2px);border-color:color-mix(in srgb,currentColor 55%,#30343b);box-shadow:inset 0 1px 0 #ffffff18,0 0 22px color-mix(in srgb,currentColor 18%,transparent),0 12px 26px #0006}
+.gauge{filter:drop-shadow(0 0 8px color-mix(in srgb,var(--gauge-color) 30%,transparent));background:conic-gradient(var(--gauge-color) var(--progress),#30363d 0);box-shadow:0 0 0 1px color-mix(in srgb,var(--gauge-color) 22%,transparent),inset 0 0 18px #0005;transition:filter .25s}
+.gauge:before{background:radial-gradient(circle at 35% 25%,#252b32,#101317 72%);box-shadow:inset 0 3px 10px #000a,inset 0 0 0 1px #ffffff15}
+.calories .gauge{filter:drop-shadow(0 0 9px #ff914d66)}.waterstat .gauge{filter:drop-shadow(0 0 9px #65cfff66)}.sleepstat .gauge{filter:drop-shadow(0 0 9px #bba5ff66)}
+.stat .gauge-inner strong{text-shadow:0 0 12px color-mix(in srgb,var(--gauge-color) 22%,transparent)}
+#muscles .body-map{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 20%,#35404b 0,transparent 44%),linear-gradient(150deg,#202832,#101318 75%);box-shadow:inset 0 1px 0 #ffffff15,inset 0 -18px 35px #0005,0 12px 28px #0005}
+#muscles .body-map:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,#ffffff08,transparent 24%,transparent 75%,#ffffff04);border-radius:inherit}
+#muscles .body-base{fill:#424c58;stroke:#a4afb9;stroke-width:1.4;filter:drop-shadow(0 3px 3px #0008)}
+#muscles .muscle-zone{cursor:pointer;stroke:#ffb17b;stroke-width:1.15;filter:drop-shadow(0 0 2px #ff650044);transition:fill .22s,stroke .22s,stroke-width .22s,filter .22s,opacity .22s}
+#muscles .muscle-zone:hover,#muscles .muscle-zone:focus-visible{stroke:#fff1df!important;stroke-width:2.4!important;filter:drop-shadow(0 0 5px #ff6500cc)!important;opacity:1!important;outline:none}
+#muscles .muscle-zone.selected-muscle{stroke:#fff!important;stroke-width:2.7!important;filter:drop-shadow(0 0 7px #ff6500)!important;opacity:1!important}
+#muscles .recovery-item{cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s;background:linear-gradient(145deg,#252c34,#171b20);box-shadow:inset 0 1px 0 #ffffff0d,0 5px 14px #0002}
+#muscles .recovery-item:active{transform:scale(.99)}
+#muscles .recovery-item.selected-muscle{border-color:#ff873d;box-shadow:0 0 0 1px #ff873d55,0 0 20px #ff650027,inset 0 1px 0 #ffffff14;transform:translateY(-1px)}
+#muscles .recovery-item .progress{height:9px;box-shadow:inset 0 1px 3px #0009}
+#muscles .recovery-item .progress span{box-shadow:0 0 10px currentColor;min-width:2px}
+@media(prefers-reduced-motion:reduce){.stat,.gauge,#muscles .muscle-zone,#muscles .recovery-item{transition:none}}
+
+
+/* Focused activity launcher and more sculpted muscle-map presentation */
+.activity-launcher{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0 18px}
+.activity-launch{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:5px;min-height:104px;padding:14px;border:1px solid #343b43;border-radius:17px;background:linear-gradient(145deg,#20262d,#111419);color:#f5f6f7;text-align:right;box-shadow:inset 0 1px 0 #ffffff0a,0 8px 18px #0003;transition:transform .18s,border-color .18s,box-shadow .18s,background .18s}
+.activity-launch>span{font-size:25px;line-height:1.1;filter:drop-shadow(0 0 7px #ff6a003b)}
+.activity-launch b{font-size:14px;font-weight:850}
+.activity-launch small{font-size:11px;color:#aab1bb}
+.activity-launch.active{border-color:#ff6a00;background:linear-gradient(145deg,#3b2418,#19191b 78%);box-shadow:inset 0 0 0 1px #ff6a0033,0 0 20px #ff6a0020,0 8px 18px #0004}
+.activity-launch:active{transform:scale(.975)}
+.activity-subsection{animation:activitySubEnter .22s ease-out both}
+@keyframes activitySubEnter{from{opacity:.5;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.activity-subsection.hidden{display:none!important}
+#muscles .body-map{background:radial-gradient(ellipse at 50% 27%,#3c4652 0,transparent 47%),linear-gradient(155deg,#242d37,#101318 78%);border-color:#46515d;box-shadow:inset 0 1px 0 #ffffff15,inset 0 -18px 32px #0006,0 12px 26px #0005}
+#muscles .body-map svg{filter:drop-shadow(0 0 8px #ff6a0018) drop-shadow(0 8px 10px #0006)}
+#muscles .body-base{fill:#38424d;stroke:#8894a0;stroke-width:1.6;filter:drop-shadow(0 0 3px #ffffff10)}
+#muscles .muscle-zone{stroke-width:1.25;filter:drop-shadow(0 0 2px #ff873d4d)}
+#muscles .muscle-zone.selected-muscle{stroke:#fff0c9!important;stroke-width:2.8!important;filter:drop-shadow(0 0 7px #ff6a00)!important}
+@media(min-width:480px){.activity-launcher{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:360px){.activity-launch{padding:11px;min-height:96px}.activity-launch b{font-size:12px}.activity-launch small{font-size:10px}}
+
+/* FitBros saved GPS routes */
+.route-legend{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 14px;font-size:.9rem}.route-legend span{display:flex;align-items:center;gap:7px}.route-legend i{width:11px;height:11px;border-radius:50%;display:inline-block}.saved-route-item{padding:12px;border:1px solid var(--border,#333);border-radius:14px;margin:8px 0}.saved-route-item strong{display:block}.saved-route-item small{color:var(--muted,#aaa)}#savedRoutesMap{min-height:340px;border-radius:16px;overflow:hidden}
+
+/* Dedicated Strava-inspired run/walk workspace */
+.runhub-page #savedRoutesMap{height:54vh;min-height:350px}.runhub-page .gps-actions button{font-size:.95rem;padding:10px 6px}.nav .navbtn{min-width:58px;padding-inline:7px}}
+
+/* Map-first run/walk hub: preserve the rest of FitBros navigation and screens. */
+.route-map-top h2{font-size:1.35rem}.route-map-record{bottom:14px}.gps-record-screen .gps-stats strong{font-size:1.45rem}}
+
+/* GPS live recording: Strava-inspired fullscreen presentation, launched from Training tab */
+body.gps-live-mode{overflow:hidden}
+body.gps-live-mode #app .topbar,body.gps-live-mode #app .nav,body.gps-live-mode #app .welcome,body.gps-live-mode #app main.wrap>section.page:not(#activity){display:none!important}
+body.gps-live-mode #activity>.cementfit-promo,body.gps-live-mode #activity>.section-title,body.gps-live-mode #activity>.activity-launcher,body.gps-live-mode #activity>#workoutSection,body.gps-live-mode #activity>#runSection,body.gps-live-mode #activity>#walkSection,body.gps-live-mode #activity>#historySection,body.gps-live-mode #activity>#routesSection{display:none!important}
+body.gps-live-mode #app main.wrap{padding:0!important;margin:0!important;max-width:none!important}
+body.gps-live-mode #activity{position:fixed!important;inset:0!important;z-index:99990!important;overflow:auto!important;background:#111!important;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)!important}
+body.gps-live-mode #gpsSection{display:block!important;position:static!important;margin:0!important;padding:0!important}
+body.gps-live-mode #gpsTrackerPanel{min-height:100dvh;border:0!important;border-radius:0!important;background:#111!important;box-shadow:none!important;padding:18px 20px 22px!important;display:flex;flex-direction:column;gap:10px}
+body.gps-live-mode #gpsTrackerPanel>h3,body.gps-live-mode #gpsTrackerPanel>p.muted:not(#gpsStatus),body.gps-live-mode #gpsTrackerPanel>.gps-map-title,body.gps-live-mode #gpsTrackerPanel>#gpsMapHint,body.gps-live-mode #gpsTrackerPanel>label,body.gps-live-mode #gpsTrackerPanel>.per-activity-joint,body.gps-live-mode #gpsTrackerPanel>p.muted.tiny:last-child{display:none!important}
+body.gps-live-mode #gpsMap{height:24dvh;min-height:130px;max-height:250px;order:0;border:0;border-radius:14px}
+body.gps-live-mode #gpsTrackerPanel:before{content:"FITBROS  •  GPS";color:#ff6417;font-weight:900;letter-spacing:2px;font-size:.9rem;order:-1}
+body.gps-live-mode #gpsTrackerPanel:after{content:"";display:block;order:1;flex:1;min-height:6px}
+body.gps-live-mode #gpsTrackerPanel .gps-stats{order:2;display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:0}
+body.gps-live-mode #gpsTrackerPanel .gps-stats>div{border:0;background:transparent;box-shadow:none;padding:8px 3px;text-align:center;align-items:center;gap:4px}
+body.gps-live-mode #gpsTrackerPanel #gpsElapsed{font-size:clamp(2.7rem,12vw,4.8rem);font-weight:900;letter-spacing:-2px;text-align:center}
+body.gps-live-mode #gpsTrackerPanel #gpsDistance{font-size:clamp(3.5rem,18vw,6rem);font-weight:900;letter-spacing:-2px;text-align:center}
+body.gps-live-mode #gpsTrackerPanel #gpsSpeed,body.gps-live-mode #gpsTrackerPanel #gpsPace{font-size:clamp(1.8rem,8vw,3rem);font-weight:850;text-align:center}
+body.gps-live-mode #gpsTrackerPanel .gps-stats small{font-size:1rem;color:#bdbdbd}
+body.gps-live-mode #gpsStatus{order:3;text-align:center;min-height:2.5em;margin:4px 0;color:#bdbdbd!important}
+body.gps-live-mode #gpsTrackerPanel .gps-actions{order:4;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+body.gps-live-mode #gpsTrackerPanel .gps-actions button{min-height:62px;border-radius:999px;font-size:1.05rem;font-weight:850}
+body.gps-live-mode #gpsTrackerPanel #gpsStart{grid-column:1/-1}
+body.gps-live-mode #gpsTrackerPanel #gpsPause{background:#ff5700!important;color:white!important;border-color:#ff5700!important}
+body.gps-live-mode #gpsTrackerPanel #gpsFinish{background:#292929!important;color:#fff!important}
+body.gps-live-mode #gpsTrackerPanel #gpsDiscard{background:transparent!important;border-color:#444!important;color:#aaa!important}
+@media(max-height:700px){body.gps-live-mode #gpsMap{height:17dvh;min-height:90px}body.gps-live-mode #gpsTrackerPanel #gpsElapsed{font-size:2.7rem}body.gps-live-mode #gpsTrackerPanel #gpsDistance{font-size:3.5rem}}
+
+/* Final GPS screen layout: map + Strava-like live stats, only while recording */
+body.gps-live-mode #gpsTrackerPanel #gpsMap{display:block!important;width:100%!important;height:24dvh!important;min-height:145px!important;max-height:260px!important;flex:0 0 auto!important}
+body.gps-live-mode #gpsTrackerPanel .gps-stats{grid-template-columns:1fr 1fr!important}
+body.gps-live-mode #gpsTrackerPanel .gps-stats>div:first-child{grid-column:1/-1}
+body.gps-live-mode #gpsTrackerPanel .gps-stats>div:first-child #gpsElapsed{font-size:clamp(2.8rem,12vw,5rem)!important}
+body.gps-live-mode #gpsTrackerPanel #gpsDistance{font-size:clamp(3.6rem,17vw,5.8rem)!important}
+body.gps-live-mode #gpsTrackerPanel .gps-actions{position:sticky;bottom:0;padding-bottom:env(safe-area-inset-bottom);background:#111}
+.route-map-wrap{position:relative;isolation:isolate}
+#savedRoutesMap{width:100%;height:clamp(380px,62vh,720px);min-height:380px;background:#202328}
+#savedRoutesMap .leaflet-pane{z-index:400}
+.route-map-record{z-index:700}
+
+
+
+/* Stable GPS recording screen: responsive single viewport, no overlapping controls */
+body.gps-live-mode{overflow:hidden!important}
+body.gps-live-mode #app .topbar,
+body.gps-live-mode #app .nav,
+body.gps-live-mode #app .welcome,
+body.gps-live-mode #app main.wrap>section.page:not(#activity){display:none!important}
+body.gps-live-mode #activity>.cementfit-promo,
+body.gps-live-mode #activity>.section-title,
+body.gps-live-mode #activity>.activity-launcher,
+body.gps-live-mode #activity>#workoutSection,
+body.gps-live-mode #activity>#runSection,
+body.gps-live-mode #activity>#walkSection,
+body.gps-live-mode #activity>#historySection,
+body.gps-live-mode #activity>#routesSection{display:none!important}
+body.gps-live-mode #app main.wrap{padding:0!important;margin:0!important;max-width:none!important}
+body.gps-live-mode #activity{
+ position:fixed!important;inset:0!important;width:100%!important;
+ height:100vh!important;height:100dvh!important;z-index:99990!important;
+ overflow:hidden!important;box-sizing:border-box!important;
+ background:#111!important;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)!important;
+}
+body.gps-live-mode #gpsSection{display:block!important;height:100%!important;min-height:0!important;overflow:hidden!important}
+body.gps-live-mode #gpsTrackerPanel{
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ width:100%!important;height:100%!important;min-height:0!important;max-height:100%!important;
+ overflow:hidden!important;box-sizing:border-box!important;margin:0!important;
+ border:0!important;border-radius:0!important;background:#111!important;box-shadow:none!important;
+ padding:clamp(7px,1.2vh,13px) clamp(14px,4vw,22px) clamp(8px,1vh,12px)!important;
+ gap:clamp(3px,.6vh,7px)!important;
+}
+body.gps-live-mode #gpsTrackerPanel>h3,
+body.gps-live-mode #gpsTrackerPanel>p.muted:not(#gpsStatus),
+body.gps-live-mode #gpsTrackerPanel>.gps-map-title,
+body.gps-live-mode #gpsTrackerPanel>#gpsMapHint,
+body.gps-live-mode #gpsTrackerPanel>label,
+body.gps-live-mode #gpsTrackerPanel>.per-activity-joint,
+body.gps-live-mode #gpsTrackerPanel>p.muted.tiny:last-child{display:none!important}
+body.gps-live-mode #gpsTrackerPanel:before{
+ content:"FITBROS  •  GPS";display:block;flex:0 0 auto;order:-1;
+ color:#ff6417;font-weight:900;letter-spacing:1.5px;font-size:clamp(.72rem,2vh,.9rem);line-height:1.1;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsMap{
+ display:block!important;order:0!important;flex:0 1 23dvh!important;
+ width:100%!important;height:23dvh!important;min-height:95px!important;max-height:210px!important;
+ border:0!important;border-radius:12px!important;overflow:hidden!important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats{
+ order:1!important;display:grid!important;grid-template-columns:1fr 1fr!important;
+ grid-template-rows:auto auto!important;gap:0 8px!important;flex:1 1 auto!important;
+ min-height:0!important;margin:0!important;align-content:space-evenly!important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats>div{
+ display:flex!important;min-width:0!important;min-height:0!important;
+ flex-direction:column!important;align-items:center!important;justify-content:center!important;
+ gap:3px!important;padding:clamp(2px,.6vh,7px) 1px!important;
+ border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsElapsed{
+ font-size:clamp(2rem,8.5vh,4.4rem)!important;line-height:1!important;
+ font-weight:900!important;letter-spacing:-1.5px!important;white-space:nowrap!important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsDistance{
+ font-size:clamp(2.5rem,11vh,5rem)!important;line-height:1!important;
+ font-weight:900!important;letter-spacing:-1px!important;white-space:nowrap!important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsSpeed,
+body.gps-live-mode #gpsTrackerPanel #gpsPace{
+ font-size:clamp(1.2rem,4.5vh,2.2rem)!important;line-height:1.05!important;
+ font-weight:850!important;text-align:center!important;overflow-wrap:anywhere!important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats small{
+ font-size:clamp(.72rem,2vh,.95rem)!important;line-height:1.1!important;color:#bdbdbd!important;
+}
+body.gps-live-mode #gpsStatus{
+ order:2!important;flex:0 0 auto!important;min-height:0!important;max-height:2.5em!important;
+ overflow:hidden!important;text-align:center!important;margin:0!important;
+ font-size:clamp(.68rem,1.8vh,.84rem)!important;line-height:1.2!important;color:#bdbdbd!important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-actions{
+ order:3!important;display:grid!important;grid-template-columns:1fr 1fr!important;
+ grid-auto-rows:minmax(42px,auto)!important;gap:7px!important;flex:0 0 auto!important;
+ min-width:0!important;margin:0!important;padding:4px 0 0!important;
+ position:static!important;background:#111!important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-actions button{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:100%!important;min-width:0!important;min-height:clamp(42px,6.3vh,56px)!important;
+ max-height:58px!important;box-sizing:border-box!important;
+ padding:6px 5px!important;margin:0!important;border-radius:13px!important;
+ font-size:clamp(.78rem,2.3vh,.98rem)!important;line-height:1.15!important;
+ white-space:normal!important;overflow-wrap:anywhere!important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsStart{grid-column:1/-1!important}
+body.gps-live-mode #gpsTrackerPanel #gpsPause{background:#ff5700!important;color:#fff!important;border-color:#ff5700!important}
+body.gps-live-mode #gpsTrackerPanel #gpsFinish{background:#292929!important;color:#fff!important}
+body.gps-live-mode #gpsTrackerPanel #gpsDiscard{background:transparent!important;border-color:#444!important;color:#aaa!important}
+@media(max-height:680px){
+ body.gps-live-mode #gpsTrackerPanel #gpsMap{height:17dvh!important;flex-basis:17dvh!important;min-height:78px!important}
+ body.gps-live-mode #gpsTrackerPanel #gpsElapsed{font-size:clamp(1.8rem,7vh,3rem)!important}
+ body.gps-live-mode #gpsTrackerPanel #gpsDistance{font-size:clamp(2.3rem,9vh,3.8rem)!important}
+ body.gps-live-mode #gpsTrackerPanel #gpsSpeed,body.gps-live-mode #gpsTrackerPanel #gpsPace{font-size:clamp(1.1rem,4vh,1.7rem)!important}
+ body.gps-live-mode #gpsTrackerPanel .gps-actions{gap:5px!important}
+ body.gps-live-mode #gpsTrackerPanel .gps-actions button{min-height:40px!important;max-height:46px!important}
+}
+
+
+/* v8: fit every GPS recording control inside the visible phone viewport */
+html:has(body.gps-live-mode),
+body.gps-live-mode,
+body.gps-live-mode #app,
+body.gps-live-mode #app main.wrap,
+body.gps-live-mode #activity,
+body.gps-live-mode #gpsSection,
+body.gps-live-mode #gpsTrackerPanel {
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+body.gps-live-mode #activity {
+  height: 100vh !important;
+  height: 100dvh !important;
+  padding-top: max(env(safe-area-inset-top), 3px) !important;
+  padding-bottom: max(env(safe-area-inset-bottom), 3px) !important;
+}
+body.gps-live-mode #gpsTrackerPanel {
+  display: grid !important;
+  grid-template-rows: auto minmax(70px, 22dvh) minmax(0, 1fr) auto auto !important;
+  align-content: stretch !important;
+  gap: clamp(2px, .45dvh, 5px) !important;
+  padding: clamp(5px, .8dvh, 9px) clamp(12px, 3.5vw, 20px) !important;
+}
+body.gps-live-mode #gpsTrackerPanel:before {
+  grid-row: 1 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsMap {
+  grid-row: 2 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  flex: none !important;
+  margin: 0 !important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats {
+  grid-row: 3 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 1fr 1fr !important;
+  align-content: stretch !important;
+  justify-content: stretch !important;
+  gap: 0 6px !important;
+  padding: 0 !important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats > div {
+  overflow: hidden !important;
+  padding: 0 !important;
+  justify-content: center !important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsDistance {
+  font-size: clamp(2rem, 8.5dvh, 4rem) !important;
+  line-height: .98 !important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsElapsed {
+  font-size: clamp(1.7rem, 6.8dvh, 3.4rem) !important;
+  line-height: 1 !important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsSpeed,
+body.gps-live-mode #gpsTrackerPanel #gpsPace {
+  font-size: clamp(1rem, 3.5dvh, 1.8rem) !important;
+  line-height: 1.05 !important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-stats small {
+  font-size: clamp(.65rem, 1.6dvh, .86rem) !important;
+}
+body.gps-live-mode #gpsStatus {
+  grid-row: 4 !important;
+  max-height: 2.2em !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  font-size: clamp(.62rem, 1.45dvh, .78rem) !important;
+  line-height: 1.1 !important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-actions {
+  grid-row: 5 !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: repeat(2, minmax(38px, 5.7dvh)) !important;
+  gap: clamp(4px, 1vw, 8px) !important;
+  padding: 0 0 max(env(safe-area-inset-bottom), 2px) !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+}
+body.gps-live-mode #gpsTrackerPanel .gps-actions button {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: none !important;
+  padding: 3px 4px !important;
+  font-size: clamp(.72rem, 1.9dvh, .92rem) !important;
+  line-height: 1.05 !important;
+  border-radius: 12px !important;
+  white-space: normal !important;
+}
+body.gps-live-mode #gpsTrackerPanel #gpsStart {
+  grid-column: 1 / -1 !important;
+}
+body.gps-live-mode #gpsTrackerPanel > p.muted.tiny:last-child {
+  display: none !important;
+}
+@media (max-height: 620px) {
+  body.gps-live-mode #gpsTrackerPanel {
+    grid-template-rows: auto minmax(58px, 18dvh) minmax(0, 1fr) auto auto !important;
+    gap: 2px !important;
+  }
+  body.gps-live-mode #gpsTrackerPanel .gps-actions {
+    grid-template-rows: repeat(2, minmax(32px, 5.2dvh)) !important;
+  }
+  body.gps-live-mode #gpsTrackerPanel #gpsDistance {
+    font-size: clamp(1.7rem, 7dvh, 3rem) !important;
+  }
+  body.gps-live-mode #gpsTrackerPanel #gpsElapsed {
+    font-size: clamp(1.5rem, 5.8dvh, 2.7rem) !important;
+  }
+}
+
+/* FitTrack personal offline edition */
+#compare, [data-page="compare"], #homeCompare, #homeCompareTitle, #homeDailyChallenge, #dailyChallenges, #weeklyChallenges, .challenge-section, .challenge-card, .compare-section { display:none !important; }
+
+/* Remove social/challenge/server-only modules in FitTrack Personal */
+#challenges, [data-go="challenges"], #homeDailyChallenge, #dailyChallenges, #weeklyChallenges, #homeCompare, #homeCompareTitle, #compare, [data-page="compare"], #aiFoodModal, [data-ai-food], .challenge-section, .challenge-card { display:none !important; }
+
+#routesSection, [data-activity-panel="routesSection"] { display:none !important; }
