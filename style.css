@@ -767,3 +767,22 @@ body{background:radial-gradient(ellipse at 85% 0%,#123b24 0,transparent 35%),rad
 .nav-cementfit img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:6px}
 .topbar{border-bottom-color:#24422e}
 :focus-visible{outline:2px solid #7af7a5;outline-offset:2px}
+
+
+/* FitTrack polish: green dumbbell tab and branded workout header */
+:root{--bg:#070d09;--panel:#101a13;--panel2:#17251b;--line:#294331;--orange:#42ed82;--orange2:#8bffb0;--green:#42ed82;--text:#f3fff6;--muted:#a7b9ab}
+body{background:radial-gradient(ellipse at 82% 0%,rgba(34,130,67,.22),transparent 38%),radial-gradient(ellipse at 0% 70%,rgba(20,72,39,.16),transparent 34%),var(--bg)}
+.welcome{background:linear-gradient(115deg,#142b1b,#101713 72%);border-color:#2b5838;box-shadow:0 12px 38px #0003}
+.panel,.stat,.login-card{box-shadow:0 8px 26px rgba(0,0,0,.16)}
+.primary{background:linear-gradient(135deg,#6cf59b,#27c968);color:#06200f;box-shadow:0 6px 20px #39e87920}
+.navbtn.active{background:linear-gradient(135deg,#39e879,#20b85b);color:#06200f;border-color:#39e879;box-shadow:0 5px 18px #39e87925}
+.nav-dumbbell{width:28px;height:27px;display:inline-flex;align-items:center;justify-content:center;color:#43ed82;vertical-align:middle}
+.nav-dumbbell svg{display:block;width:25px;height:25px;filter:drop-shadow(0 0 5px #39e87925)}
+.navbtn.active .nav-dumbbell{color:#06200f}
+.cementfit-banner{display:flex;align-items:center;gap:16px;margin:4px 0 18px;background:linear-gradient(120deg,#14251a,#101713);border-color:#2c5638}
+.cementfit-banner img{width:min(180px,42%);height:105px;object-fit:contain;border-radius:12px;background:#050706}
+.cementfit-banner h2{margin:0 0 4px;font-size:22px;color:#8bffb0}.cementfit-banner p{margin:0}
+.stat,.panel,.food-item,.log-item{transition:border-color .18s ease,transform .18s ease}
+.food-item.active{background:#14291b;border-color:#42ed82}
+input:focus,select:focus{border-color:#42ed82;box-shadow:0 0 0 3px #42ed8218}
+@media(max-width:480px){.cementfit-banner{gap:11px;padding:13px}.cementfit-banner img{width:38%;height:82px}.cementfit-banner h2{font-size:18px}.cementfit-banner p{font-size:12px}}
