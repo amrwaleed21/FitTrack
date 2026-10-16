@@ -1,4 +1,4 @@
-/* FitTrack offline shell cache. Keep this file at the site root. */
+/* FitTrack-green-refresh offline shell cache. Keep this file at the site root. */
 const CACHE_PREFIX = 'fittrack-shell-';
 const CACHE_NAME = CACHE_PREFIX + 'fittrack-personal-v1';
 const APP_SHELL = [

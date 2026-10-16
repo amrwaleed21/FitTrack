@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>تفاصيل المنتج | CEMENTFIT</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;-webkit-tap-highlight-color:transparent}
+:root{--orange:#ff5a00;--orange-dark:#d94700;--white:#f5f5f5;--muted:#999;--border:rgba(255,255,255,.1)}
+body{min-height:100vh;color:var(--white);background:radial-gradient(circle at 85% 5%,rgba(255,80,0,.12),transparent 30%),radial-gradient(circle at 10% 80%,rgba(255,70,0,.06),transparent 30%),#050607;padding-bottom:40px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:10px;z-index:100;width:calc(100% - 28px);max-width:1100px;margin:10px auto 0;padding:13px 17px;border:1px solid var(--border);border-radius:17px;background:rgba(15,15,15,.9);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 10px 35px rgba(0,0,0,.35)}
+.logo{display:flex;align-items:center;gap:8px;direction:ltr;font-size:1.15rem;font-weight:900;white-space:nowrap}.logo i,.fit{color:var(--orange)}.cement{color:white}
+.back-link{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--border);border-radius:11px;background:rgba(255,255,255,.05);font-size:.8rem;font-weight:800}.back-link:hover{border-color:var(--orange)}
+main{width:100%;max-width:1050px;margin:0 auto;padding:35px 20px}.breadcrumb{color:var(--muted);font-size:.85rem;margin-bottom:22px}.breadcrumb a:hover{color:var(--orange)}
+.product-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start}
+.product-visual{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:23px;background:linear-gradient(145deg,#191919,#090909);box-shadow:0 20px 55px rgba(0,0,0,.4)}
+.product-visual:before{content:"";position:absolute;z-index:1;top:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent)}
+.product-image{width:100%;aspect-ratio:1/1;display:block;object-fit:cover;background:#141414}
+.product-info{padding:12px 0}.eyebrow{color:var(--orange);font-size:.75rem;font-weight:900;letter-spacing:2px;margin-bottom:10px}
+h1{font-size:clamp(1.65rem,4vw,2.5rem);line-height:1.5;font-weight:900;margin-bottom:15px}
+.description{color:#aaa;line-height:2;font-size:.98rem;white-space:pre-line;overflow-wrap:anywhere;margin-bottom:22px}
+.price-box{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:17px;margin-bottom:22px;border:1px solid rgba(255,90,0,.2);border-radius:15px;background:rgba(255,90,0,.055)}
+.price{color:var(--orange);font-size:1.8rem;font-weight:900}.old-price{color:#888;text-decoration:line-through;font-size:.95rem}.discount{color:white;background:var(--orange-dark);border-radius:7px;padding:4px 9px;font-size:.75rem;font-weight:900}
+.shipping-box{display:grid;gap:13px;padding:17px;margin-bottom:22px;background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:15px}
+.shipping-row{display:flex;align-items:flex-start;gap:11px;color:#aaa;font-size:.87rem;line-height:1.8}.shipping-row i{color:var(--orange);margin-top:5px}.shipping-row strong{color:white}
+.quantity-row{display:flex;align-items:center;gap:13px;margin-bottom:18px}.quantity-label{font-weight:800}
+.quantity-control{display:flex;align-items:center;gap:15px;padding:5px;border:1px solid var(--border);border-radius:11px;background:rgba(255,255,255,.04)}
+.quantity-control button{width:34px;height:34px;border:0;border-radius:8px;color:white;background:rgba(255,255,255,.08);font-size:1.1rem;cursor:pointer}.quantity-control button:hover{background:var(--orange)}
+#quantity{min-width:20px;text-align:center;font-weight:900}
+.actions{display:grid;grid-template-columns:1fr;gap:11px}.action-btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:51px;padding:12px 17px;border:0;border-radius:12px;color:white;font-size:.92rem;font-weight:900;cursor:pointer;transition:.2s}.action-btn:active{transform:scale(.97)}
+.add-btn{background:linear-gradient(135deg,var(--orange),var(--orange-dark));box-shadow:0 8px 22px rgba(255,90,0,.2)}.add-btn:hover{box-shadow:0 0 25px rgba(255,90,0,.4)}.cart-btn{background:rgba(255,255,255,.06);border:1px solid var(--border)}.cart-btn:hover{border-color:var(--orange)}
+.status-message{text-align:center;padding:65px 15px;color:#aaa;line-height:2}.status-message i{display:block;font-size:2rem;color:var(--orange);margin-bottom:15px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,30px);opacity:0;visibility:hidden;z-index:300;width:max-content;max-width:calc(100% - 30px);padding:13px 19px;border:1px solid var(--border);border-radius:13px;background:#171717;box-shadow:0 10px 35px rgba(0,0,0,.5);font-size:.85rem;font-weight:800;transition:.25s}.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+@media(max-width:700px){main{padding:25px 14px}.product-layout{grid-template-columns:1fr;gap:20px}.product-visual{border-radius:17px}.product-image{aspect-ratio:1/.88}.product-info{padding:0 2px}h1{font-size:1.65rem}.price{font-size:1.55rem}}
+@media(max-width:360px){.logo{font-size:.95rem}.back-link{font-size:.7rem;padding:8px}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html" class="logo"><i class="fa-solid fa-dumbbell"></i><span><span class="cement">CEMENT</span><span class="fit">FIT</span></span></a>
+<a href="index.html" class="back-link"><i class="fa-solid fa-arrow-right"></i> الرجوع إلى FitBros</a>
+</header>
+<main>
+<div class="breadcrumb"><a href="index.html">FitBros</a> / <a href="cementfit.html">المنتجات</a> / <span id="breadcrumbName">تفاصيل المنتج</span></div>
+<div id="productContent"><div class="status-message"><i class="fa-solid fa-spinner fa-spin"></i>جاري تحميل بيانات المنتج...</div></div>
+</main>
+<div class="toast" id="toast"></div>
+<script>
+const SUPABASE_URL = 'https://mhdprpqckntptvgsmnlo.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_0qMAGKpfoQpHa5FoO-lNLg_5OIc2Kn_';
+const DEFAULT_IMAGE = 'https://via.placeholder.com/700x700?text=CementFit';
+let currentProduct = null;
+let quantity = 1;
+let toastTimer = null;
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
+}
+function formatPrice(value) {
+    return Number(value || 0).toLocaleString('en-US') + ' ج.م';
+}
+function safeImageUrl(value) {
+    if (!value) return DEFAULT_IMAGE;
+    try {
+        const url = new URL(value, window.location.href);
+        if (url.protocol === 'https:' || url.protocol === 'http:') return url.href;
+    } catch (error) {}
+    return DEFAULT_IMAGE;
+}
+async function loadProduct() {
+    const productId = new URLSearchParams(window.location.search).get('id');
+    if (!productId) return showError('لم يتم تحديد المنتج المطلوب.');
+
+    const content = document.getElementById('productContent');
+    content.innerHTML = '<div class="status-message"><i class="fa-solid fa-spinner fa-spin"></i>جاري تحميل بيانات المنتج...</div>';
+
+    try {
+        // Use Supabase REST API directly, matching the working products page.
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
+        let response;
+        try {
+            const query = new URLSearchParams({ select: '*', id: `eq.${productId}`, limit: '1' });
+            response = await fetch(`${SUPABASE_URL}/rest/v1/products?${query.toString()}`, {
+                method: 'GET',
+                headers: {
+                    'apikey': SUPABASE_KEY,
+                    'Authorization': `Bearer ${SUPABASE_KEY}`,
+                    'Accept': 'application/json'
+                },
+                signal: controller.signal
+            });
+        } finally {
+            clearTimeout(timeoutId);
+        }
+
+        if (!response.ok) {
+            const details = await response.text().catch(() => '');
+            console.error('Supabase REST error:', response.status, details);
+            return showError(`تعذّر تحميل المنتج (HTTP ${response.status}). تأكد من الاتصال وصلاحيات قراءة المنتجات.`);
+        }
+
+        const products = await response.json();
+        const product = Array.isArray(products) ? products[0] : null;
+        if (!product) return showError('المنتج غير موجود أو تم حذفه.');
+
+        currentProduct = product;
+        renderProduct(product);
+    } catch (error) {
+        console.error('Failed to load product:', error);
+        return showError(error.name === 'AbortError'
+            ? 'انتهت مهلة الاتصال بقاعدة البيانات. حدّث الصفحة وحاول مرة أخرى.'
+            : 'تعذّر الاتصال بقاعدة البيانات. تأكد من الإنترنت ثم حدّث الصفحة.');
+    }
+}
+function showError(message) {
+    const box = document.createElement('div');
+    box.className = 'status-message';
+    const icon = document.createElement('i');
+    icon.className = 'fa-solid fa-circle-exclamation';
+    const text = document.createElement('p');
+    text.textContent = message;
+    box.append(icon, text);
+    document.getElementById('productContent').replaceChildren(box);
+}
+function renderProduct(product) {
+    document.title = product.name + ' | CEMENTFIT';
+    document.getElementById('breadcrumbName').textContent = product.name;
+    const content = document.getElementById('productContent');
+    content.innerHTML = '';
+
+    const layout = document.createElement('section');
+    layout.className = 'product-layout';
+
+    const visual = document.createElement('div');
+    visual.className = 'product-visual';
+    const img = document.createElement('img');
+    img.className = 'product-image';
+    img.alt = product.name;
+    img.src = product.image || DEFAULT_IMAGE;
+    img.onerror = function() {
+        this.onerror = null;
+        this.src = DEFAULT_IMAGE;
+    };
+    visual.appendChild(img);
+
+    const info = document.createElement('div');
+    info.className = 'product-info';
+    const eyebrow = document.createElement('div');
+    eyebrow.className = 'eyebrow';
+    eyebrow.textContent = 'CEMENTFIT QUALITY';
+
+    const title = document.createElement('h1');
+    title.textContent = product.name;
+
+    const description = document.createElement('p');
+    description.className = 'description';
+    description.textContent = product.desc || 'منتج عالي الجودة من CEMENTFIT.';
+
+    const priceBox = document.createElement('div');
+    priceBox.className = 'price-box';
+    const price = document.createElement('span');
+    price.className = 'price';
+    price.textContent = formatPrice(product.price);
+    priceBox.appendChild(price);
+
+    if (Number(product.old_price) > Number(product.price)) {
+        const oldPrice = document.createElement('span');
+        oldPrice.className = 'old-price';
+        oldPrice.textContent = formatPrice(product.old_price);
+        const discount = document.createElement('span');
+        discount.className = 'discount';
+        discount.textContent = 'خصم ' + Math.round(((Number(product.old_price) - Number(product.price)) / Number(product.old_price)) * 100) + '%';
+        priceBox.append(oldPrice, discount);
+    }
+
+    const shippingBox = document.createElement('div');
+    shippingBox.className = 'shipping-box';
+    const shippingRow = document.createElement('div');
+    shippingRow.className = 'shipping-row';
+    const truck = document.createElement('i');
+    truck.className = 'fa-solid fa-truck';
+    const shippingText = document.createElement('span');
+    shippingText.textContent = 'مصاريف الشحن: ';
+    const shippingValue = document.createElement('strong');
+    shippingValue.textContent = product.shipping_price !== null && product.shipping_price !== undefined && product.shipping_price !== ''
+        ? formatPrice(product.shipping_price) : 'تحدد مع الطلب';
+    shippingText.appendChild(shippingValue);
+    shippingRow.append(truck, shippingText);
+
+    const locationsRow = document.createElement('div');
+    locationsRow.className = 'shipping-row';
+    const locationIcon = document.createElement('i');
+    locationIcon.className = 'fa-solid fa-location-dot';
+    const locationText = document.createElement('span');
+    locationText.textContent = 'الأماكن المتاحة للشحن: ';
+    const locationValue = document.createElement('strong');
+    locationValue.textContent = product.shipping_locations || 'تحدد مع الطلب';
+    locationText.appendChild(locationValue);
+    locationsRow.append(locationIcon, locationText);
+    shippingBox.append(shippingRow, locationsRow);
+
+    const quantityRow = document.createElement('div');
+    quantityRow.className = 'quantity-row';
+    const quantityLabel = document.createElement('span');
+    quantityLabel.className = 'quantity-label';
+    quantityLabel.textContent = 'الكمية:';
+    const quantityControl = document.createElement('div');
+    quantityControl.className = 'quantity-control';
+
+    const minus = document.createElement('button');
+    minus.type = 'button'; minus.textContent = '−'; minus.setAttribute('aria-label', 'تقليل الكمية');
+    const quantityValue = document.createElement('span');
+    quantityValue.id = 'quantity'; quantityValue.textContent = quantity;
+    const plus = document.createElement('button');
+    plus.type = 'button'; plus.textContent = '+'; plus.setAttribute('aria-label', 'زيادة الكمية');
+
+    minus.addEventListener('click', () => { quantity = Math.max(1, quantity - 1); quantityValue.textContent = quantity; });
+    plus.addEventListener('click', () => { quantity = Math.min(99, quantity + 1); quantityValue.textContent = quantity; });
+    quantityControl.append(minus, quantityValue, plus);
+    quantityRow.append(quantityLabel, quantityControl);
+
+    const actions = document.createElement('div');
+    actions.className = 'actions';
+    const addButton = document.createElement('button');
+    addButton.type = 'button';
+    addButton.className = 'action-btn add-btn';
+    addButton.innerHTML = '<i class="fa-solid fa-cart-plus"></i> أضف للسلة';
+    addButton.addEventListener('click', addProductToCart);
+
+    const cartButton = document.createElement('a');
+    cartButton.href = 'cementfit.html';
+    cartButton.className = 'action-btn cart-btn';
+    cartButton.innerHTML = '<i class="fa-solid fa-arrow-right"></i> متابعة التسوق';
+    actions.append(addButton, cartButton);
+
+    info.append(eyebrow, title, description, priceBox, shippingBox, quantityRow, actions);
+    layout.append(visual, info);
+    content.appendChild(layout);
+}
+function addProductToCart() {
+    if (!currentProduct) return;
+    let cart;
+    try {
+        cart = JSON.parse(localStorage.getItem('cementfit_cart') || '[]');
+        if (!Array.isArray(cart)) cart = [];
+    } catch (error) { cart = []; }
+
+    const existing = cart.find(item => String(item.id) === String(currentProduct.id));
+    if (existing) existing.qty = (Number(existing.qty) || 0) + quantity;
+    else cart.push({ ...currentProduct, qty: quantity });
+
+    localStorage.setItem('cementfit_cart', JSON.stringify(cart));
+    showToast('تمت إضافة المنتج للسلة بنجاح');
+}
+loadProduct();
+</script>
+</body>
+</html>
